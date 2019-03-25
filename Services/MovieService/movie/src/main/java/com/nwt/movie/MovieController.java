@@ -19,7 +19,7 @@ public class MovieController {
     @RequestMapping("/add")
     public void addNewMovie(@RequestParam String name) {
         Movie movie = new Movie();
-        movie.setNaziv("Glup i gluplji");
+        movie.setNaziv(name);
 
         movieRepository.save(movie);
     }
