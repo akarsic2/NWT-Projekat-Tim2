@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MovieGenreServiceApplication",
+            "request": "launch",
+            "mainClass": "com.example.moviegenreservice.MovieGenreServiceApplication",
+            "projectName": "movie-genre-service"
+        }
+    ]
+}
