@@ -20,8 +20,9 @@ public class User {
     private Date datumRodjenja;
     private String zemlja;
 
-    @ManyToMany
-    private Set<MovieBasicInfo> savedMovies;
+    /*@ManyToMany
+    @JoinTable
+    private Set<MovieBasicInfo> savedMovies;*/
 
     public int getId() {
         return id;
@@ -87,11 +88,11 @@ public class User {
         this.zemlja = zemlja;
     }
 
-    public Set<MovieBasicInfo> getSavedMovies() {
+    /*public Set<MovieBasicInfo> getSavedMovies() {
         return savedMovies;
     }
 
     public void setSavedMovies(Set<MovieBasicInfo> savedMovies) {
         this.savedMovies = savedMovies;
-    }
+    }*/
 }

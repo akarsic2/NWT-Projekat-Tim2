@@ -14,6 +14,9 @@ public class MovieBasicInfo {
     private Integer movieId;
     private String naziv;
 
+    /*@ManyToMany
+    private Set<User> usersThatLikeTheMovie;*/
+
     public Integer getId() {
         return Id;
     }
@@ -37,4 +40,12 @@ public class MovieBasicInfo {
     public void setNaziv(String naziv) {
         this.naziv = naziv;
     }
+
+    /*public Set<User> getUsersThatLikeTheMovie() {
+        return usersThatLikeTheMovie;
+    }
+
+    public void setUsersThatLikeTheMovie(Set<User> usersThatLikeTheMovie) {
+        this.usersThatLikeTheMovie = usersThatLikeTheMovie;
+    }*/
 }
