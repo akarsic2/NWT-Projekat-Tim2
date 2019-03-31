@@ -1,21 +1,31 @@
-package com.nwt.movie;
+package com.nwt.movie.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import com.sun.istack.NotNull;
+
 
 @Entity
 public class Movie {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer id;
+    
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+    @NotNull
+    @Size(min = 5, message = "Duzina naziva mora biti preko 5 karaktera")
     private String naziv;
+    @Size(min = 10, message = "Opis mora sadrzavati minimalno 10 karaktera")
     private String kratakOpis;
     private String reziser;
     private String scenaristi;
     private String producent;
+    @Pattern(regexp="^(https?://)?(www.youtube.com|youtu.?be)/.+$")
     private String trailer;
     private String slika;
     
@@ -81,5 +91,17 @@ public class Movie {
 
     public void setSlika(String slika) {
         this.slika = slika;
+    }
+
+    public Movie(){}
+
+    public Movie(String naziv, String kratakOpis, String reziser, String scenaristi, String producent, String trailer, String slika ){
+        this.naziv=naziv;
+        this.kratakOpis = kratakOpis;
+        this.reziser = reziser;
+        this.scenaristi = scenaristi;
+        this.producent = producent;
+        this.trailer = trailer;
+        this.slika= slika;
     }
 }
