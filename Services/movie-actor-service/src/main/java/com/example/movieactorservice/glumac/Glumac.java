@@ -1,5 +1,6 @@
 package com.example.movieactorservice.glumac;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -26,15 +27,19 @@ public class Glumac {
     private Integer id;
 
     private String name;
+    private String lastName;
 
     @ManyToMany(mappedBy = "glumci")
-    private Set<Film> movies;
-    
+    private Set<Film> movies = new HashSet<>();
 
-    public Glumac() {}
+    public Glumac() {
+    }
 
-    public Glumac(String name) {
+  
+   
+    public Glumac(String name, String lastName) {
         this.name = name;
+        this.lastName = lastName;
     }
 
     public Integer getId() {
@@ -53,5 +58,20 @@ public class Glumac {
         this.name = name;
     }
 
-    
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setMovies(Film film) {
+        this.movies.add(film);
+    }
+
+    public Set<Film> getMovies() {
+        return this.movies;
+    }
+
 }

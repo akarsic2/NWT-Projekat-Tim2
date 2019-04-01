@@ -1,5 +1,6 @@
 package com.example.movieactorservice.film;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -31,7 +32,7 @@ public class Film {
         name = "glumac_film", 
         joinColumns = @JoinColumn(name = "film_id"), 
         inverseJoinColumns = @JoinColumn(name = "glumac_id"))
-    private Set<Glumac> glumci;
+    private Set<Glumac> glumci = new HashSet<>();
 
     public Film() {}
 
@@ -42,7 +43,6 @@ public class Film {
     public Integer getId() {
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }
@@ -55,5 +55,8 @@ public class Film {
         this.film = film;
     }
 
+    public void setGlumci(Glumac glumac) {
+        this.glumci.add(glumac);
+    }
     
 }

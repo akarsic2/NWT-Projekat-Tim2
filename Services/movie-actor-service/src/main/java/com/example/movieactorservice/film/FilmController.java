@@ -3,6 +3,7 @@ package com.example.movieactorservice.film;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,9 +19,9 @@ public class FilmController {
     }
 
 
-    @RequestMapping("/addN")
-    public void addNew(@RequestParam String _film) {
-        Film film = new Film(_film);
-        filmRepository.save(film);
+    @RequestMapping(value = "/addN", method = RequestMethod.POST)
+    public void addNew(@RequestParam String film) {
+        Film film1 = new Film(film);
+        filmRepository.save(film1);
     }
 }
