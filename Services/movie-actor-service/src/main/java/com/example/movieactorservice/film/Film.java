@@ -15,8 +15,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Pattern;
 
 import com.example.movieactorservice.glumac.Glumac;
+import com.sun.istack.NotNull;
 
 @Entity
 @Table (name = "film")

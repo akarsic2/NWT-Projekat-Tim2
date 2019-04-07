@@ -14,6 +14,5 @@ public interface GlumacRepository extends PagingAndSortingRepository<Glumac, Lon
     List<Glumac> findByName(@Param("name") String name);
     List<Glumac> findByLastName(@Param("last") String lastName);
     List<Glumac> findByNameAndLastName(@Param("name") String name, @Param("last") String last);
-    @Query("SELECT u.movies FROM glumac u WHERE u.id = :id")
-    Set<Film> findByGlumci(@Param("id")Integer id);
+    
 }

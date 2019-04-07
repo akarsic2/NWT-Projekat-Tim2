@@ -15,6 +15,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import com.example.movieactorservice.film.Film;
 
@@ -25,8 +27,10 @@ public class Glumac {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
-
+    @NotNull
+    @Pattern(regexp = "^[a-zA-Z]*$")
     private String name;
+
     private String lastName;
 
     @ManyToMany(mappedBy = "glumci")

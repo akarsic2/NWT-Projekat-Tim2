@@ -30,7 +30,6 @@ public class GlumacController {
     @RequestMapping("/")
     public void addDataToTable() {
         Glumac glumac = new Glumac("Megan", "Fox");
-        Glumac glumac1 = new Glumac("Cameron", "Diaz");
         Glumac glumac2 = new Glumac("Amy", "Poehler");
         Glumac glumac3 = new Glumac("Robert", "Downey");
         Glumac glumac4 = new Glumac("Chris", "Hemsworth");
@@ -38,31 +37,48 @@ public class GlumacController {
         Glumac glumac6 = new Glumac("Tom", "Holand");
         Glumac glumac7 = new Glumac("Scarlett", "Johansson");
         Glumac glumac8 = new Glumac("Christian", "Bale");
+        Glumac glumac9 = new Glumac("Jack" ,"Nicholson");
+        Glumac glumac10 = new Glumac("John", "Travolta");
 
 
-        Film film = new Film("Avengers, Age of Ultron");
         Film film1 = new Film("Endgame");
         Film film2 = new Film("The Prestige");
         Film film3 = new Film("Batman");
         Film film4 = new Film("Iron Man");
         Film film5 = new Film("Spiderman");
+        Film film6 = new Film("Pulp fiction");
+        Film film7 = new Film("The shining");
 
-        glumac3.setMovies(film);
         glumac3.setMovies(film1);
         glumac3.setMovies(film4);
 
-        glumac5.setMovies(film);
+        glumac4.setMovies(film1);
         glumac5.setMovies(film1);
-
-        film.setGlumci(glumac3);
-        film.setGlumci(glumac5);
+        glumac6.setMovies(film1);
+        glumac6.setMovies(film5);
+        glumac7.setMovies(film1);
+        glumac7.setMovies(film2);
+        glumac8.setMovies(film2);
+        glumac8.setMovies(film3);
+        glumac9.setMovies(film7);
+        glumac10.setMovies(film6);
+       
 
         film1.setGlumci(glumac3);
+        film1.setGlumci(glumac4);
         film1.setGlumci(glumac5);
+        film1.setGlumci(glumac6);
+        film1.setGlumci(glumac7);
+        film2.setGlumci(glumac8);
+        film2.setGlumci(glumac7);
+        film3.setGlumci(glumac8);
+
         film4.setGlumci(glumac3);
+        film5.setGlumci(glumac6);
+        film6.setGlumci(glumac10);
+        film7.setGlumci(glumac9);
 
         glumacRepository.save(glumac);
-        glumacRepository.save(glumac1);
         glumacRepository.save(glumac2);
         glumacRepository.save(glumac3);
         glumacRepository.save(glumac4);
@@ -70,13 +86,17 @@ public class GlumacController {
         glumacRepository.save(glumac6);
         glumacRepository.save(glumac7);
         glumacRepository.save(glumac8);
+        glumacRepository.save(glumac9);
+        glumacRepository.save(glumac10);
 
-        filmRepository.save(film);
+
         filmRepository.save(film1);
         filmRepository.save(film2);
         filmRepository.save(film3);
         filmRepository.save(film4);
         filmRepository.save(film5);
+        filmRepository.save(film6);
+        filmRepository.save(film7);
 
     }
 
@@ -101,7 +121,7 @@ public class GlumacController {
         if(glumacRepository.findByNameAndLastName(name, last).isEmpty())
             return null;
         Glumac glumac = glumacRepository.findByNameAndLastName(name, last).get(0);
-        return glumacRepository.findByGlumci(glumac.getId());
+        return filmRepository.findByActor(glumac.getId());
     } 
 
 }

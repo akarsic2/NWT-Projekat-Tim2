@@ -1,5 +1,6 @@
 package com.example.movieactorservice.film;
 
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,13 @@ public class FilmController {
         return "nwt test";
     }
 
+    @RequestMapping(value = "/film", method = RequestMethod.GET)
+    public List<Film> findMovie(@RequestParam(value = "title",required = false) String title) {
+        if(title == null)
+            return (List<Film>) filmRepository.findAll();
+        return filmRepository.findByFilm(title);
+        
+    }
 
     @RequestMapping(value = "/addN", method = RequestMethod.POST)
     public void addNew(@RequestParam String film) {
