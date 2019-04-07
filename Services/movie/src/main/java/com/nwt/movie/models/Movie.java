@@ -7,8 +7,6 @@ import javax.persistence.Id;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-import com.sun.istack.NotNull;
-
 
 @Entity
 public class Movie {
@@ -17,7 +15,6 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @NotNull
     @Size(min = 5, message = "Duzina naziva mora biti preko 5 karaktera")
     private String naziv;
     @Size(min = 10, message = "Opis mora sadrzavati minimalno 10 karaktera")
