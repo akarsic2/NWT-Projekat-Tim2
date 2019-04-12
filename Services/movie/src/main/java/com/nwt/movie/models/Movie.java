@@ -4,8 +4,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 
 @Entity
@@ -26,6 +35,27 @@ public class Movie {
     private String trailer;
     private String slika;
     
+    
+    public Movie(){}
+
+    public Movie(String naziv, String kratakOpis, String reziser, String scenaristi, String producent, String trailer, String slika ){
+        this.naziv=naziv;
+        this.kratakOpis = kratakOpis;
+        this.reziser = reziser;
+        this.scenaristi = scenaristi;
+        this.producent = producent;
+        this.trailer = trailer;
+        this.slika= slika;
+    }
+
+    @ManyToMany
+    @JoinTable(
+        name = "movie_grade", 
+        joinColumns = @JoinColumn(name = "movie_id"),
+        inverseJoinColumns = @JoinColumn(name = "grade_id"))
+    @JsonManagedReference
+    private Set<Grade> grades = new HashSet<>();
+
     public Integer getId() {
         return id;
     }
@@ -90,15 +120,4 @@ public class Movie {
         this.slika = slika;
     }
 
-    public Movie(){}
-
-    public Movie(String naziv, String kratakOpis, String reziser, String scenaristi, String producent, String trailer, String slika ){
-        this.naziv=naziv;
-        this.kratakOpis = kratakOpis;
-        this.reziser = reziser;
-        this.scenaristi = scenaristi;
-        this.producent = producent;
-        this.trailer = trailer;
-        this.slika= slika;
-    }
 }

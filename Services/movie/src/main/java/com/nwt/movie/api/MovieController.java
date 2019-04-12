@@ -23,11 +23,14 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class MovieController {
 
-    // @Autowired
-    // private MovieRepository movieRepository;
+    @Autowired
+    private MovieRepository movieRepository;
 
-    @Autowired 
-    private RestTemplate restTemplate;
+    @Autowired
+    private GradeRepository gradeRepository;
+
+    // @Autowired 
+    // private RestTemplate restTemplate;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public void init(){
@@ -35,45 +38,54 @@ public class MovieController {
         Movie m2 = new Movie("naziv2", "kratki opis2", "reziser2", "scenarista2", "producent2", "https://www.youtube.com/watch?v=gq4S-ovWVlM", "slika2");
         Movie m3 = new Movie("naziv3", "kratki opis3", "reziser3", "scenarista3", "producent3", "https://www.youtube.com/watch?v=gq4S-ovWVlM", "slika3");
         
-        // movieRepository.save(m1);
-        // movieRepository.save(m2);
-        // movieRepository.save(m3);
+        movieRepository.save(m1);
+        movieRepository.save(m2);
+        movieRepository.save(m3);
     }
 
     @RequestMapping(value = "/movies", method = RequestMethod.GET)
-   // public ResponseEntity<String> getAllMovies(){
-       public String getAllMovies(){
-        // ArrayList<Movie> filmovi = new ArrayList<>();
-        // movieRepository.findAll().forEach(movie -> {
-        //     filmovi.add(movie);
-        // });
-        // JSONArray jsArray = new JSONArray(filmovi);
+    public ResponseEntity<String> getAllMovies(){
+       //public String getAllMovies(){
+        ArrayList<Movie> filmovi = new ArrayList<>();
+        movieRepository.findAll().forEach(movie -> {
+            filmovi.add(movie);
+        });
+        JSONArray jsArray = new JSONArray(filmovi);
 
-        String url = "http://movie-genre-service/film";
-        return restTemplate.getForObject(url, String.class);
-        // return new ResponseEntity<String>(jsArray.toString(), HttpStatus.OK);
+        // String url = "http://movie-genre-service/film";
+        // return restTemplate.getForObject(url, String.class);
+         return new ResponseEntity<String>(jsArray.toString(), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/movie/{movieId}", method = RequestMethod.GET)
     public ResponseEntity getMovieById(@PathVariable int movieId){
-        // Optional<Movie> movie = movieRepository.findById(movieId);
-        // if (!movie.isPresent()){
-        //     return new ResponseEntity<>("Ne postoji film", HttpStatus.NOT_FOUND);
-        // }
-        // return new ResponseEntity<>(movie.get(), HttpStatus.OK);
-        return null;
+        Optional<Movie> movie = movieRepository.findById(movieId);
+        if (!movie.isPresent()){
+            return new ResponseEntity<>("Ne postoji film", HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(movie.get(), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST) 
+    @RequestMapping(value = "/add", method = RequestMethod.POST, produces = "application/json;charset=UTF-8") 
     public ResponseEntity<String> addNewMovie(@RequestBody @Valid Movie movie) {
         
-            // Movie result = movieRepository.save(movie);
-            // JSONObject o = new JSONObject();
-            // o.put("id", result.getId());
-            // return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
-            return null;
+            Movie result = movieRepository.save(movie);
+            JSONObject o = new JSONObject();
+            o.put("id", result.getId());
+            return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/grades", method = RequestMethod.GET)
+    public ResponseEntity<String> getAllGrades(){
+        ArrayList<Grade> ocjene = new ArrayList<>();
+        gradeRepository.findAll().forEach(ocjena -> {
+            ocjene.add(ocjena);
+        });
+        JSONArray jsArray = new JSONArray(ocjene);
 
+        // String url = "http://movie-genre-service/film";
+        // return restTemplate.getForObject(url, String.class);
+         return new ResponseEntity<String>(jsArray.toString(), HttpStatus.OK);
+    }
     
 }
