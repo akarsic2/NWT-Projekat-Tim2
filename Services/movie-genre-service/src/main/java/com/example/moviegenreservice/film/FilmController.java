@@ -28,8 +28,8 @@ public class FilmController {
         
     }
     @RequestMapping("/addN")
-    public void addNew(@RequestParam String _film) {
-        Film film = new Film(_film);
+    public void addNew(@RequestParam String _film, @RequestParam Integer id) {
+        Film film = new Film(id,_film);
         filmRepository.save(film);
     }
 }

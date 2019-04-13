@@ -8,5 +8,5 @@ import org.springframework.data.repository.query.Param;
 
 
 public interface ZanrRepository extends PagingAndSortingRepository<Zanr, Long> { 
-    List<Zanr> findByZanr(@Param("zanr") String zanr);
+    List<Zanr> findByZanr(String zanr);
 }

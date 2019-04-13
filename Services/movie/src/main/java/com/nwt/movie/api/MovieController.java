@@ -1,8 +1,8 @@
 package com.nwt.movie.api;
 
+import com.nwt.movie.models.QueueProducer;
 import com.nwt.movie.repository.*;
 import com.nwt.movie.models.*;
-
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,6 +29,9 @@ public class MovieController {
 
     @Autowired
     private GradeRepository gradeRepository;
+
+     @Autowired
+     private QueueProducer producer;
 
     // @Autowired 
     // private RestTemplate restTemplate;
@@ -70,10 +74,21 @@ public class MovieController {
     @RequestMapping(value = "/add", method = RequestMethod.POST, produces = "application/json;charset=UTF-8") 
     public ResponseEntity<String> addNewMovie(@RequestBody @Valid Movie movie) {
 
-        Movie result = movieRepository.save(movie);
-        JSONObject o = new JSONObject();
-        o.put("id", result.getId());
-        return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
+            try {
+                Movie result = movieRepository.save(movie);
+                JSONObject object = new JSONObject();
+                object.put("id", result.getId());
+                object.put("naziv", result.getNaziv());
+                producer.send(object.toString());
+                JSONObject o = new JSONObject();
+                o.put("id", result.getId());
+                return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
+
+            } catch (Exception e) {
+                System.out.print(e.getMessage());
+
+                return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+            }
     }
 
     @RequestMapping(value = "/grades", method = RequestMethod.GET)
@@ -88,5 +103,4 @@ public class MovieController {
         // return restTemplate.getForObject(url, String.class);
          return new ResponseEntity<String>(jsArray.toString(), HttpStatus.OK);
     }
-    
 }

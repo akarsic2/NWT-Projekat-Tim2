@@ -4,11 +4,21 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+
+import javax.management.Notification;
+import javax.validation.Valid;
+
+import com.example.movieactorservice.QueueProducer;
 import com.example.movieactorservice.film.Film;
 import com.example.movieactorservice.film.FilmRepository;
 import com.mysql.cj.Query;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,8 +32,10 @@ public class GlumacController {
     @Autowired
     private FilmRepository filmRepository;
 
+    QueueProducer queueProducer;
+
     @RequestMapping("/test")
-    public String test(){
+    public String test() {
         return "nwt test";
     }
 
@@ -37,9 +49,8 @@ public class GlumacController {
         Glumac glumac6 = new Glumac("Tom", "Holand");
         Glumac glumac7 = new Glumac("Scarlett", "Johansson");
         Glumac glumac8 = new Glumac("Christian", "Bale");
-        Glumac glumac9 = new Glumac("Jack" ,"Nicholson");
+        Glumac glumac9 = new Glumac("Jack", "Nicholson");
         Glumac glumac10 = new Glumac("John", "Travolta");
-
 
         Film film1 = new Film("Endgame");
         Film film2 = new Film("The Prestige");
@@ -62,7 +73,6 @@ public class GlumacController {
         glumac8.setMovies(film3);
         glumac9.setMovies(film7);
         glumac10.setMovies(film6);
-       
 
         film1.setGlumci(glumac3);
         film1.setGlumci(glumac4);
@@ -89,7 +99,6 @@ public class GlumacController {
         glumacRepository.save(glumac9);
         glumacRepository.save(glumac10);
 
-
         filmRepository.save(film1);
         filmRepository.save(film2);
         filmRepository.save(film3);
@@ -97,31 +106,47 @@ public class GlumacController {
         filmRepository.save(film5);
         filmRepository.save(film6);
         filmRepository.save(film7);
-
+   
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public void addNewActor(@RequestParam String name, @RequestParam String last) {
-        Glumac glumac = new Glumac(name, last);
-        glumacRepository.save(glumac);
-    }
-
-    @RequestMapping(value = "/glumac", method = RequestMethod.GET)
-    public List<Glumac> findActor(@RequestParam(value = "name",required = false) String name, @RequestParam(value = "last", required = false) String last) {
-        if(last == null)
-            return glumacRepository.findByName(name);
-        if(name == null)
-            return glumacRepository.findByLastName(last);
-        return glumacRepository.findByNameAndLastName(name, last);
+    public ResponseEntity addNewActor(@Valid @RequestBody Glumac glumac) {
+        Glumac glumac1 = glumacRepository.save(glumac);
+        JSONObject o = new JSONObject();
+        o.put("id", glumac1.getId());
+        return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
         
     }
 
-    @RequestMapping(value = "/filmovi", method = RequestMethod.GET)
-    public List<Film> findAllMovies(@RequestParam String name, @RequestParam String last) {
+    @RequestMapping(value = "/glumac/{name}/{last}", method = RequestMethod.GET)
+    public ResponseEntity findActor(@PathVariable String name, @PathVariable String last) {
+        if(last == null){
+            if(glumacRepository.findByName(name).isEmpty())
+                return new ResponseEntity<>("Ne postoji glumac", HttpStatus.NOT_FOUND); 
+            return new ResponseEntity<>(glumacRepository.findByName(name), HttpStatus.OK);
+        }
+        if(name == null){
+            if(glumacRepository.findByName(last).isEmpty())
+                return new ResponseEntity<>("Ne postoji glumac", HttpStatus.NOT_FOUND); 
+            return new ResponseEntity<>(glumacRepository.findByLastName(name), HttpStatus.OK);
+        }
         if(glumacRepository.findByNameAndLastName(name, last).isEmpty())
-            return null;
+            return new ResponseEntity<>("Ne postoji glumac", HttpStatus.NOT_FOUND); 
+
+        return new ResponseEntity<>(glumacRepository.findByNameAndLastName(name,last), HttpStatus.OK);
+
+        
+    }
+
+    @RequestMapping(value = "/filmovi/{name}/{last}", method = RequestMethod.GET)
+    public ResponseEntity findAllMovies(@PathVariable String name, @PathVariable String last) {
+        if(glumacRepository.findByNameAndLastName(name, last).isEmpty())
+            return new ResponseEntity<>("Ne postoji glumac", HttpStatus.NOT_FOUND); 
         Glumac glumac = glumacRepository.findByNameAndLastName(name, last).get(0);
-        return filmRepository.findByActor(glumac.getId());
+        if( filmRepository.findByActor(glumac.getId()).isEmpty())
+            return new ResponseEntity<>("Ne postoji film", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(filmRepository.findByActor(glumac.getId()), HttpStatus.OK);
+        
     } 
 
 }

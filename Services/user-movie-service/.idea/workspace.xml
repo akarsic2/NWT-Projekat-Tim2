@@ -2,32 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="313a8949-aaea-4166-af4e-84ada29aa19d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/listmovieservice.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/ListMovieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/Models/MovieBasicInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/Models/MovieList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/Models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/MovieBasicInfoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/MovieListRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/configuration/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/QueueProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/QueueConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/QueueProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../listmovieservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-actor-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/MovieActorServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/MovieActorServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/FilmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/glumac/Glumac.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/glumac/Glumac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/glumac/GlumacController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/glumac/GlumacController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/glumac/GlumacRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/glumac/GlumacRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-genre-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/film/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/film/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/film/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/film/FilmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/zanr/ZanrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/zanr/ZanrController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/zanr/ZanrRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/zanr/ZanrRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/MovieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/MovieApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/api/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/api/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/models/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movie/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-discovery/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-discovery/service-discovery/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/../service-discovery/service-discovery/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-discovery/service-discovery/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-discovery/service-discovery/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/usermanagment/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/usermanagment/Models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/usermanagment/Models/MovieBasicInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/usermanagment/Models/MovieBasicInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/usermanagment/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/usermanagment/Models/User.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -212,10 +217,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1550" />
-    <option name="height" value="845" />
+    <option name="x" value="200" />
+    <option name="width" value="1074" />
+    <option name="height" value="665" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -289,7 +293,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555156058978" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555160561175" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />

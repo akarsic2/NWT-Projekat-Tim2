@@ -1,9 +1,9 @@
 spring:
     application:
-        name: movie-genre-service
+        name: movie-actor-service
 
 server:
-    port: 8086
+    port: 8081
 eureka:
     client:
         registerWithEureka: true
