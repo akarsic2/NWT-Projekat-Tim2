@@ -4,9 +4,10 @@ import com.rabbitmq.client.Command;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import org.springframework.boot.CommandLineRunner;
+
 import com.nwt.movie.models.QueueProducer;
 
-import org.springframework.boot.CommandLineRunner;
 import org.json.JSONObject;
 
 import org.springframework.amqp.core.Binding;

@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
+import org.hibernate.query.QueryProducer;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,9 @@ public class MovieController {
 
      @Autowired
      private QueueProducer producer;
+
+    /*@Autowired
+    QueryProducer producer;*/
 
     // @Autowired 
     // private RestTemplate restTemplate;

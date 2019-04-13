@@ -1,14 +1,17 @@
 package com.nwt.movie.models;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.validation.constraints.Pattern;
@@ -46,15 +49,21 @@ public class Movie {
         this.producent = producent;
         this.trailer = trailer;
         this.slika= slika;
+        // this.grades = new HashSet<>();
     }
 
-    @ManyToMany
-    @JoinTable(
-        name = "movie_grade", 
-        joinColumns = @JoinColumn(name = "movie_id"),
-        inverseJoinColumns = @JoinColumn(name = "grade_id"))
-    @JsonManagedReference
-    private Set<Grade> grades = new HashSet<>();
+    @OneToMany(mappedBy = "movie")
+    private List<MovieGrade> movieGradeList;
+
+    // @ManyToMany
+    // @JoinTable(
+    //     name = "movie_grade", 
+    //     joinColumns = @JoinColumn(name = "movie_id"),
+    //     inverseJoinColumns = @JoinColumn(name = "grade_id"))
+    //     //Integer korisnikId;
+        
+    // @JsonManagedReference
+    // private Set<Grade> grades = new HashSet<>();
 
     public Integer getId() {
         return id;
@@ -120,4 +129,11 @@ public class Movie {
         this.slika = slika;
     }
 
+    public List<MovieGrade> getMovieGradeList(){
+        return this.movieGradeList;
+    }
+
+    public void setMovieGradeList(List<MovieGrade> lista){
+        this.movieGradeList = lista;
+    }
 }
