@@ -1,9 +1,7 @@
-package user.managment.usermanagment.Models;
+package usermanagment.Models;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.Set;
 
 @Entity
 public class User {

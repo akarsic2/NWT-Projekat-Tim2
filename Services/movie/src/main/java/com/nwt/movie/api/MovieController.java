@@ -63,6 +63,7 @@ public class MovieController {
         if (!movie.isPresent()){
             return new ResponseEntity<>("Ne postoji film", HttpStatus.NOT_FOUND);
         }
+
         return new ResponseEntity<>(movie.get(), HttpStatus.OK);
     }
 
