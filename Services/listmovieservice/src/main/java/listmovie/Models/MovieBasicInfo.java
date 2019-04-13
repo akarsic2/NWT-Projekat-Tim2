@@ -1,6 +1,4 @@
-package usermanagment.Models;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
+package listmovie.Models;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -8,23 +6,24 @@ import java.util.Set;
 @Entity
 public class MovieBasicInfo {
 
-    @Id
+    /*@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer Id;
+    private Integer Id;*/
 
+    @Id
     private Integer movieId;
     private String naziv;
 
-    @ManyToMany(mappedBy = "savedMovies")
-    private Set<User> usersThatLikeTheMovie;
+    @ManyToMany(mappedBy = "movies")
+    private Set<MovieList> lists;
 
-    public Integer getId() {
+    /*public Integer getId() {
         return Id;
     }
 
     public void setId(Integer id) {
         Id = id;
-    }
+    }*/
 
     public Integer getMovieId() {
         return movieId;
@@ -42,11 +41,11 @@ public class MovieBasicInfo {
         this.naziv = naziv;
     }
 
-    public Set<User> getUsersThatLikeTheMovie() {
-        return usersThatLikeTheMovie;
+    public Set<MovieList> getLists() {
+        return lists;
     }
 
-    public void setUsersThatLikeTheMovie(Set<User> usersThatLikeTheMovie) {
-        this.usersThatLikeTheMovie = usersThatLikeTheMovie;
+    public void setLists(Set<MovieList> lists) {
+        this.lists = lists;
     }
 }

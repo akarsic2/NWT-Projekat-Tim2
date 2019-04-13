@@ -1,7 +1,10 @@
 package usermanagment.Models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -18,9 +21,12 @@ public class User {
     private Date datumRodjenja;
     private String zemlja;
 
-    /*@ManyToMany
-    @JoinTable
-    private Set<MovieBasicInfo> savedMovies;*/
+    @ManyToMany
+    @JoinTable(
+            name = "user_movie",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "movie_id"))
+    private Set<MovieBasicInfo> savedMovies;
 
     public int getId() {
         return id;

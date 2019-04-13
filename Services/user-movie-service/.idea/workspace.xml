@@ -2,27 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="313a8949-aaea-4166-af4e-84ada29aa19d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../user-managment/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/usermanagment/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/usermanagment/Models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/usermanagment/MovieBasicInfoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/usermanagment/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/usermanagment/configuration/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-movie-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/listmovieservice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/ListMovieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/Models/MovieBasicInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/Models/MovieList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/Models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/MovieBasicInfoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/MovieListRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/configuration/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/api/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/api/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-managment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-managment/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/usermanagment/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/usermanagment/Models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/usermanagment/Models/MovieBasicInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/usermanagment/Models/MovieBasicInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/usermanagment/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/usermanagment/Models/User.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,13 +43,14 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="7" />
+          <entry key="java" value="11" />
           <entry key="properties" value="1" />
           <entry key="xml" value="1" />
           <entry key="yml" value="1" />
@@ -53,7 +59,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="7" />
+          <entry key="JAVA" value="11" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="1" />
           <entry key="YAML" value="1" />
@@ -61,18 +67,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="510" />
+          <entry key="java" value="594" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="510" />
+          <entry key="JAVA" value="594" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/MovieBasicInfoRepository.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,24 +101,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/UserRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="26" />
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -120,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="1139">
+              <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,11 +121,40 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="772">
-              <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/Models/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="27" column="64" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="27" selection-end-column="64" />
+              <folding>
+                <element signature="e#756#757#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#773#774#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,7 +162,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
+            <state relative-caret-position="510">
               <caret line="31" column="94" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
             </state>
           </provider>
@@ -151,7 +172,7 @@
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.6.RELEASE/spring-webmvc-5.1.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="11" column="123" lean-forward="true" selection-start-line="11" selection-start-column="123" selection-end-line="11" selection-end-column="123" />
+              <caret line="11" column="123" selection-start-line="11" selection-start-column="123" selection-end-line="11" selection-end-column="123" />
             </state>
           </provider>
         </entry>
@@ -159,8 +180,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/configuration/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="170">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -177,8 +198,10 @@
         <option value="$PROJECT_DIR$/src/main/java/usermanagment/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/usermanagment/MovieBasicInfoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/usermanagment/configuration/Config.java" />
-        <option value="$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java" />
         <option value="$PROJECT_DIR$/src/main/java/usermanagment/DemoApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/usermanagment/Models/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java" />
       </list>
     </option>
   </component>
@@ -189,17 +212,20 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="y" value="-7" />
-    <option name="width" value="1549" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1550" />
     <option name="height" value="845" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -241,15 +267,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="usermanagment" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="usermovieservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="user-movie-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="usermanagment" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -263,7 +280,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,7 +289,8 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554730056648" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555156058978" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -322,48 +339,49 @@
       <option name="presentableId" value="Default" />
       <updated>1554723909913</updated>
       <workItem from="1554723914865" duration="4275000" />
+      <workItem from="1555146670992" duration="5829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4275000" />
+    <option name="totallyTimeSpent" value="10104000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19798657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32907802" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30585682" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.30921987" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32907802" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,19 +395,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java</url>
-          <line>29</line>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java</url>
-          <line>64</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java</url>
-          <line>55</line>
+          <line>56</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -397,12 +415,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/Models/User.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -410,24 +422,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/configuration/Config.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="31" column="94" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.6.RELEASE/spring-webmvc-5.1.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="11" column="123" lean-forward="true" selection-start-line="11" selection-start-column="123" selection-end-line="11" selection-end-column="123" />
+          <caret line="11" column="123" selection-start-line="11" selection-start-column="123" selection-end-line="11" selection-end-column="123" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/configuration/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="31" column="94" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
+        <state relative-caret-position="170">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -437,16 +471,6 @@
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/MovieBasicInfoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -460,8 +484,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/UserMovieController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        <state relative-caret-position="1139">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -470,8 +494,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="772">
-          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/usermanagment/Models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="64" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="27" selection-end-column="64" />
+          <folding>
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

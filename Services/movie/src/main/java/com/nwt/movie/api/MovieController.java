@@ -69,11 +69,11 @@ public class MovieController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST, produces = "application/json;charset=UTF-8") 
     public ResponseEntity<String> addNewMovie(@RequestBody @Valid Movie movie) {
-        
-            Movie result = movieRepository.save(movie);
-            JSONObject o = new JSONObject();
-            o.put("id", result.getId());
-            return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
+
+        Movie result = movieRepository.save(movie);
+        JSONObject o = new JSONObject();
+        o.put("id", result.getId());
+        return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/grades", method = RequestMethod.GET)
