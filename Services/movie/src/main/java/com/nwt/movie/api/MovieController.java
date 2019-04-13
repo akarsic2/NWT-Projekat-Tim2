@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
+import org.hibernate.query.QueryProducer;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,6 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class MovieController {
-    
 
     @Autowired
     private MovieRepository movieRepository;
@@ -29,8 +29,8 @@ public class MovieController {
     @Autowired
     private GradeRepository gradeRepository;
 
-     @Autowired
-	 QueueProducer producer;
+    @Autowired
+    QueryProducer producer;
 
     // @Autowired 
     // private RestTemplate restTemplate;

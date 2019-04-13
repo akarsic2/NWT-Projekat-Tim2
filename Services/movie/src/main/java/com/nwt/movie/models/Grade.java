@@ -1,13 +1,16 @@
 package com.nwt.movie.models;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -28,10 +31,12 @@ public class Grade {
         this.kratakOpis = kratakOpis;
     }
 
-    @ManyToMany(mappedBy = "grades")
-    @JsonBackReference
-    private Set<Movie> movies = new HashSet<>();
+    // @ManyToMany(mappedBy = "grades")
+    // @JsonBackReference
+    // private Set<Movie> movies = new HashSet<>();
 
+    @OneToMany(mappedBy = "grade")
+    private List<MovieGrade> movieGradeList;
 
     public Integer getId() {
         return id;
