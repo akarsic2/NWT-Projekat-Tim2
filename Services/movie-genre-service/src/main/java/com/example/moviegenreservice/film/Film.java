@@ -27,7 +27,6 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Table (name = "film")
 public class Film {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
     @NotNull
     @Size(min=1, message = "Duzina mora biti bar 1")
@@ -43,7 +42,8 @@ public class Film {
 
     public Film() {}
 
-    public Film(String film) {
+    public Film(Integer id,String film) {
+        this.id = id;
         this.film = film;
     }
 

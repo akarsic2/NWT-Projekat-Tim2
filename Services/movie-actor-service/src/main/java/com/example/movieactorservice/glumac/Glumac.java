@@ -28,7 +28,7 @@ public class Glumac {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
     @NotNull
-    @Pattern(regexp = "^[a-zA-Z]*$")
+    @Pattern(regexp = "^[a-zA-Z]*$", message = "Greska, dozvoljena su samo slova")
     private String name;
 
     private String lastName;

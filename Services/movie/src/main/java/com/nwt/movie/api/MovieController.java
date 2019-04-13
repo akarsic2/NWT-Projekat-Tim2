@@ -2,7 +2,6 @@ package com.nwt.movie.api;
 
 import com.nwt.movie.repository.*;
 import com.nwt.movie.models.*;
-
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -22,12 +21,16 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class MovieController {
+    
 
     @Autowired
     private MovieRepository movieRepository;
 
     @Autowired
     private GradeRepository gradeRepository;
+
+     @Autowired
+	 QueueProducer producer;
 
     // @Autowired 
     // private RestTemplate restTemplate;
@@ -71,6 +74,10 @@ public class MovieController {
     public ResponseEntity<String> addNewMovie(@RequestBody @Valid Movie movie) {
         
             Movie result = movieRepository.save(movie);
+            JSONObject object = new JSONObject();
+            object.put("id", result.getId());
+            object.put("naziv", result.getNaziv());
+      //      producer.send(object);
             JSONObject o = new JSONObject();
             o.put("id", result.getId());
             return new ResponseEntity<String>(o.toString(), HttpStatus.OK);

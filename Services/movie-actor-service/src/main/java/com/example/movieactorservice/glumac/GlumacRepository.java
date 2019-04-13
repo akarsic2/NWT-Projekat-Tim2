@@ -11,8 +11,8 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 
 public interface GlumacRepository extends PagingAndSortingRepository<Glumac, Long> {
-    List<Glumac> findByName(@Param("name") String name);
-    List<Glumac> findByLastName(@Param("last") String lastName);
+    List<Glumac> findByName(String name);
+    List<Glumac> findByLastName(String lastName);
     List<Glumac> findByNameAndLastName(@Param("name") String name, @Param("last") String last);
     
 }
