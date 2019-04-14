@@ -18,6 +18,10 @@ public class MovieList {
             inverseJoinColumns = @JoinColumn(name = "movie_id"))
     private Set<MovieBasicInfo> movies;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
     public int getId() {
         return id;
     }

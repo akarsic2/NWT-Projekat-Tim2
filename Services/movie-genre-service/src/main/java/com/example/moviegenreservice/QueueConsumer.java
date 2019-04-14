@@ -45,11 +45,9 @@ public class QueueConsumer {
     @RabbitListener(queues = "Movies")
     public void processMessage(String movie) {
         try {
-            JSONParser jsonParser = new JSONParser(movie);
+            JSONObject jsonObject = new JSONObject(movie);
 
-            Film film = (Film)jsonParser.parse();
-
-            movieRepository.save(film);
+            movieRepository.save(new Film(jsonObject.getInt("id"), jsonObject.getString("naziv")));
         } catch (Exception e) {
             System.out.print(e.getMessage());
         }

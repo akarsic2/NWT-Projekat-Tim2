@@ -1,6 +1,7 @@
 package listmovie;
 
 import com.netflix.discovery.converters.Auto;
+import listmovie.Models.MovieList;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -61,7 +62,22 @@ public class ListMovieController {
         }
     }
 
-    @PostMapping("/addMovie")
+    @PostMapping("/addList")
+    public ResponseEntity<String> addNewList(@RequestBody MovieList movieList) {
+        try {
+            MovieList result = movieListRepository.save(movieList);
+            JSONObject o = new JSONObject();
+            o.put("id", result.getId());
+
+            return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
+
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+            return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+        }
+    }
+
+    /*@PostMapping("/addMovie")
     public void addMovie(@RequestParam("movieId") int movieId, @RequestParam("name") String name) {
         try {
             MovieBasicInfo movieBasicInfo = new MovieBasicInfo();
@@ -74,7 +90,7 @@ public class ListMovieController {
             System.out.println(e.getMessage());
         }
     }
-    /*@PostMapping("/addUser")
+    @PostMapping("/addUser")
     public void addUser(@RequestParam("name") String name) {
         try {
             User user = new User();
@@ -85,7 +101,7 @@ public class ListMovieController {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-    }*/
+    }
 
     @GetMapping("/movie")
     public ResponseEntity getMovie() {
@@ -100,5 +116,5 @@ public class ListMovieController {
         }
 
         return null;
-    }
+    }*/
 }
