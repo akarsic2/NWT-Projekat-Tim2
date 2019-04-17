@@ -1,31 +1,28 @@
 package listmovie.Models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.Set;
 
 @Entity
 public class User {
 
-    /*@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;*/
-
     @Id
+    @NotNull
+    @Min(value = 0)
     private int userId;
+
+    @NotEmpty
+    @Size(min = 5, max = 150)
     private String username;
 
     @OneToMany
     @JoinColumn(name = "user_id")
     private Set<MovieList> movieLists;
-
-    /*public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }*/
 
     public int getUserId() {
         return userId;

@@ -1,4 +1,4 @@
-package listmovie;
+package listmovie.Repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import listmovie.Models.MovieBasicInfo;

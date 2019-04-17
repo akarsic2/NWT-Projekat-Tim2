@@ -3,6 +3,8 @@ package usermanagment.Models;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.Set;
 
@@ -13,20 +15,25 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private String ime;
-    private String prezime;
-    private String username;
-    private String password;
-    private String email;
-    private Date datumRodjenja;
-    private String zemlja;
 
-    @ManyToMany
-    @JoinTable(
-            name = "user_movie",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "movie_id"))
-    private Set<MovieBasicInfo> savedMovies;
+    @Size(min = 5, max = 150)
+    private String ime;
+
+    @Size(min = 5, max = 150)
+    private String prezime;
+
+    @Size(min = 5, max = 150)
+    private String username;
+
+    @Size(min = 5, max = 150)
+    private String password;
+
+    @Email
+    private String email;
+
+    private Date datumRodjenja;
+
+    private String zemlja;
 
     public int getId() {
         return id;
@@ -91,12 +98,4 @@ public class User {
     public void setZemlja(String zemlja) {
         this.zemlja = zemlja;
     }
-
-    /*public Set<MovieBasicInfo> getSavedMovies() {
-        return savedMovies;
-    }
-
-    public void setSavedMovies(Set<MovieBasicInfo> savedMovies) {
-        this.savedMovies = savedMovies;
-    }*/
 }

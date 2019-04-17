@@ -1,6 +1,7 @@
 package listmovie.Models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Entity
@@ -9,6 +10,7 @@ public class MovieList {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Size(min = 5, max = 100)
     private String listName;
 
     @ManyToMany
@@ -29,14 +31,6 @@ public class MovieList {
     public void setId(int id) {
         this.id = id;
     }
-
-    /*public User getUser() {
-        return user;
-    }*/
-
-    /*public void setUser(User user) {
-        this.user = user;
-    }*/
 
     public Set<MovieBasicInfo> getMovies() {
         return movies;

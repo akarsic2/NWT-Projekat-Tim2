@@ -1,29 +1,24 @@
 package listmovie.Models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Entity
 public class MovieBasicInfo {
 
-    /*@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer Id;*/
-
     @Id
+    @NotNull
+    @Min(value = 0)
     private Integer movieId;
+
+    @Size(min = 5, max = 150)
     private String naziv;
 
     @ManyToMany(mappedBy = "movies")
     private Set<MovieList> lists;
-
-    /*public Integer getId() {
-        return Id;
-    }
-
-    public void setId(Integer id) {
-        Id = id;
-    }*/
 
     public Integer getMovieId() {
         return movieId;
