@@ -28,10 +28,10 @@ public class FilmController {
         return new ResponseEntity<>(filmRepository.findByFilm(title), HttpStatus.OK);
         
     }
-
+/*
     @RequestMapping(value = "/addN", method = RequestMethod.POST)
     public void addNew(@RequestParam String film) {
         Film film1 = new Film(film);
         filmRepository.save(film1);
-    }
+    }*/
 }

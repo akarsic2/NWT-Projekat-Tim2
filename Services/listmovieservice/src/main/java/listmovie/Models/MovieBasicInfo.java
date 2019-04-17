@@ -20,6 +20,14 @@ public class MovieBasicInfo {
     @ManyToMany(mappedBy = "movies")
     private Set<MovieList> lists;
 
+    public MovieBasicInfo() {
+
+    }
+    public MovieBasicInfo(Integer id, String naziv){
+        this.movieId = id;
+        this.naziv = naziv;
+    }
+
     public Integer getMovieId() {
         return movieId;
     }

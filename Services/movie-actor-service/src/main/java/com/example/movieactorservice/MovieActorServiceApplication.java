@@ -17,17 +17,13 @@ import org.springframework.context.annotation.Bean;
 
 
 @SpringBootApplication
-public class MovieActorServiceApplication implements CommandLineRunner{
-	@Autowired
-	QueueProducer producer;
+public class MovieActorServiceApplication {
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(MovieActorServiceApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		producer.send("Hellooooo");
-	}
+	
 	
 }

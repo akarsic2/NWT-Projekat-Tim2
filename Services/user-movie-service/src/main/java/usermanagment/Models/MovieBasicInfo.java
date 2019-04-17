@@ -18,6 +18,14 @@ public class MovieBasicInfo {
     @ManyToMany(mappedBy = "savedMovies")
     private Set<User> usersThatLikeTheMovie;
 
+    public MovieBasicInfo() {
+
+    }
+    public MovieBasicInfo(Integer id, String naziv) {
+        this.movieId = id;
+        this.naziv = naziv;
+    }
+
     public Integer getId() {
         return Id;
     }

@@ -8,7 +8,6 @@ import java.util.Optional;
 import javax.management.Notification;
 import javax.validation.Valid;
 
-import com.example.movieactorservice.QueueProducer;
 import com.example.movieactorservice.film.Film;
 import com.example.movieactorservice.film.FilmRepository;
 import com.mysql.cj.Query;
@@ -32,8 +31,6 @@ public class GlumacController {
     @Autowired
     private FilmRepository filmRepository;
 
-    QueueProducer queueProducer;
-
     @RequestMapping("/test")
     public String test() {
         return "nwt test";
@@ -51,7 +48,7 @@ public class GlumacController {
         Glumac glumac8 = new Glumac("Christian", "Bale");
         Glumac glumac9 = new Glumac("Jack", "Nicholson");
         Glumac glumac10 = new Glumac("John", "Travolta");
-
+/*
         Film film1 = new Film("Endgame");
         Film film2 = new Film("The Prestige");
         Film film3 = new Film("Batman");
@@ -86,7 +83,7 @@ public class GlumacController {
         film4.setGlumci(glumac3);
         film5.setGlumci(glumac6);
         film6.setGlumci(glumac10);
-        film7.setGlumci(glumac9);
+        film7.setGlumci(glumac9);*/
 
         glumacRepository.save(glumac);
         glumacRepository.save(glumac2);
@@ -99,13 +96,13 @@ public class GlumacController {
         glumacRepository.save(glumac9);
         glumacRepository.save(glumac10);
 
-        filmRepository.save(film1);
-        filmRepository.save(film2);
-        filmRepository.save(film3);
-        filmRepository.save(film4);
-        filmRepository.save(film5);
-        filmRepository.save(film6);
-        filmRepository.save(film7);
+        // filmRepository.save(film1);
+        // filmRepository.save(film2);
+        // filmRepository.save(film3);
+        // filmRepository.save(film4);
+        // filmRepository.save(film5);
+        // filmRepository.save(film6);
+        // filmRepository.save(film7);
    
     }
 
