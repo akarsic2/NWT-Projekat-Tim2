@@ -3,7 +3,7 @@ spring:
                           name: list-movie-service
 
                       server:
-                          port: 8082
+                          port: 8084
                       eureka:
                           client:
                               registerWithEureka: true

@@ -23,7 +23,6 @@ import com.example.movieactorservice.glumac.Glumac;
 @Table (name = "film")
 public class Film {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
     private String film;
@@ -37,7 +36,8 @@ public class Film {
 
     public Film() {}
 
-    public Film(String film) {
+    public Film(Integer id,String film) {
+        this.id = id;
         this.film = film;
     }
 

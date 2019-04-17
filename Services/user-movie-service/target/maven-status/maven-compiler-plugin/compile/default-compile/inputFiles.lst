@@ -1,0 +1,9 @@
+/home/kali/NWT-Projekat-Tim2/Services/user-movie-service/src/main/java/usermanagment/MovieBasicInfoRepository.java
+/home/kali/NWT-Projekat-Tim2/Services/user-movie-service/src/main/java/usermanagment/configuration/AmqpConfig.java
+/home/kali/NWT-Projekat-Tim2/Services/user-movie-service/src/main/java/usermanagment/QueueConsumer.java
+/home/kali/NWT-Projekat-Tim2/Services/user-movie-service/src/main/java/usermanagment/configuration/Config.java
+/home/kali/NWT-Projekat-Tim2/Services/user-movie-service/src/main/java/usermanagment/Models/MovieBasicInfo.java
+/home/kali/NWT-Projekat-Tim2/Services/user-movie-service/src/main/java/usermanagment/UserRepository.java
+/home/kali/NWT-Projekat-Tim2/Services/user-movie-service/src/main/java/usermanagment/DemoApplication.java
+/home/kali/NWT-Projekat-Tim2/Services/user-movie-service/src/main/java/usermanagment/Models/User.java
+/home/kali/NWT-Projekat-Tim2/Services/user-movie-service/src/main/java/usermanagment/UserMovieController.java

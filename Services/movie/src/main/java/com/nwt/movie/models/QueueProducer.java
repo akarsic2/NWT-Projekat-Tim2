@@ -1,5 +1,7 @@
 package com.nwt.movie.models;
 
+import java.beans.BeanProperty;
+
 import javax.management.Notification;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,7 +27,26 @@ public class QueueProducer {
     Queue queue() {
       return new Queue("Movies", false);
     }
+    @Bean
+    Queue queueActor() {
+      return new Queue("Movie-actor", false);
+    }
+    @Bean
+    Queue queueUser() {
+      return new Queue("Movie-user", false);
+    }
+
+    @Bean
+    Queue queueList() {
+      return new Queue("Movie-list", false);
+    }
     public void send(String movie){
       template.convertAndSend("Movies", movie);
+      template.convertAndSend("Movie-actor", movie);
+      template.convertAndSend("Movie-user",movie);
+      template.convertAndSend("Movie-list",movie);
+
     }
+
+
 }

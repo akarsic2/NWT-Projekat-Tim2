@@ -46,7 +46,7 @@ public class QueueConsumer {
     public void processMessage(String movie) {
         try {
             JSONObject jsonObject = new JSONObject(movie);
-
+            System.out.println("Jeeeel");
             movieRepository.save(new Film(jsonObject.getInt("id"), jsonObject.getString("naziv")));
         } catch (Exception e) {
             System.out.print(e.getMessage());

@@ -1,6 +1,5 @@
 package com.nwt.movie;
 
-import com.rabbitmq.client.Command;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -22,18 +21,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.io.Serializable;
-
 
 @SpringBootApplication
-public class MovieApplication implements CommandLineRunner {
+public class MovieApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MovieApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-
-	}
 }
