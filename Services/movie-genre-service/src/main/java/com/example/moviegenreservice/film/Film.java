@@ -42,6 +42,10 @@ public class Film {
 
     public Film() {}
 
+    public Film(String film) {
+        this.film = film;
+    }
+
     public Film(Integer id,String film) {
         this.id = id;
         this.film = film;

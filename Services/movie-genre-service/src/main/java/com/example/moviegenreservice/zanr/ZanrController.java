@@ -45,50 +45,50 @@ public class ZanrController {
         Zanr zanr4 = new Zanr("Action");
         Zanr zanr5 = new Zanr("Horror");
 
-        // Film film1 = new Film("Endgame");
-        // Film film2 = new Film("The Prestige");
-        // Film film3 = new Film("Batman");
-        // Film film4 = new Film("Iron Man");
-        // Film film5 = new Film("Spiderman");
-        // Film film6 = new Film("Pulp fiction");
-        // Film film7 = new Film("The shining");
+        Film film1 = new Film(1,"Endgame");
+        Film film2 = new Film(2,"The Prestige");
+        Film film3 = new Film(3,"Batman");
+        Film film4 = new Film(4,"Iron Man");
+        Film film5 = new Film(5,"Spiderman");
+        Film film6 = new Film(6,"Pulp fiction");
+        Film film7 = new Film(7,"The shining");
 
-        // zanr.setMovies(film2);
-        // zanr.setMovies(film6);
-        // zanr.setMovies(film7);
+        zanr.setMovies(film2);
+        zanr.setMovies(film6);
+        zanr.setMovies(film7);
 
-        // zanr1.setMovies(film1);
-        // zanr1.setMovies(film3);
-        // zanr1.setMovies(film4);
-        // zanr1.setMovies(film5);
+        zanr1.setMovies(film1);
+        zanr1.setMovies(film3);
+        zanr1.setMovies(film4);
+        zanr1.setMovies(film5);
 
-        // zanr2.setMovies(film3);
-        // zanr2.setMovies(film6);
-        // zanr2.setMovies(film7);
+        zanr2.setMovies(film3);
+        zanr2.setMovies(film6);
+        zanr2.setMovies(film7);
 
-        // zanr3.setMovies(film2);
-        // zanr3.setMovies(film7);
+        zanr3.setMovies(film2);
+        zanr3.setMovies(film7);
 
-        // zanr4.setMovies(film1);
-        // zanr5.setMovies(film7);
+        zanr4.setMovies(film1);
+        zanr5.setMovies(film7);
 
-        // film1.setZanrs(zanr1);
-        // film1.setZanrs(zanr4);
-        // film2.setZanrs(zanr);
-        // film2.setZanrs(zanr3);
+        film1.setZanrs(zanr1);
+        film1.setZanrs(zanr4);
+        film2.setZanrs(zanr);
+        film2.setZanrs(zanr3);
 
-        // film3.setZanrs(zanr1);
-        // film3.setZanrs(zanr2);
-        // film4.setZanrs(zanr1);
-        // film5.setZanrs(zanr1);
-        // film6.setZanrs(zanr);
+        film3.setZanrs(zanr1);
+        film3.setZanrs(zanr2);
+        film4.setZanrs(zanr1);
+        film5.setZanrs(zanr1);
+        film6.setZanrs(zanr);
 
-        // film6.setZanrs(zanr2);
+        film6.setZanrs(zanr2);
 
-        // film7.setZanrs(zanr);
-        // film7.setZanrs(zanr2);
-        // film7.setZanrs(zanr3);
-        // film7.setZanrs(zanr5);
+        film7.setZanrs(zanr);
+        film7.setZanrs(zanr2);
+        film7.setZanrs(zanr3);
+        film7.setZanrs(zanr5);
 
         zanrRepository.save(zanr);
         zanrRepository.save(zanr1);
@@ -97,13 +97,13 @@ public class ZanrController {
         zanrRepository.save(zanr4);
         zanrRepository.save(zanr5);
 
-        // filmRepository.save(film1);
-        // filmRepository.save(film2);
-        // filmRepository.save(film3);
-        // filmRepository.save(film4);
-        // filmRepository.save(film5);
-        // filmRepository.save(film6);
-        // filmRepository.save(film7);
+        filmRepository.save(film1);
+        filmRepository.save(film2);
+        filmRepository.save(film3);
+        filmRepository.save(film4);
+        filmRepository.save(film5);
+        filmRepository.save(film6);
+        filmRepository.save(film7);
 
     }
 

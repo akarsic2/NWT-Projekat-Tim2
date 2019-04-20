@@ -1,7 +1,5 @@
 package com.nwt.movie.models;
 
-import java.beans.BeanProperty;
-
 import javax.management.Notification;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
