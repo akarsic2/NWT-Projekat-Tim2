@@ -2,70 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="313a8949-aaea-4166-af4e-84ada29aa19d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/QueueConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/configuration/AmqpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/QueueConsumer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/configuration/AmqpConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../listmovieservice/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/QueueConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/configuration/AmqpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/configuration/AmqpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/usermanagment/QueueConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/usermanagment/configuration/AmqpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/usermanagment/QueueConsumer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/usermanagment/configuration/AmqpConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/movie-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/movie-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../listmovieservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/Models/MovieBasicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/src/main/java/listmovie/Models/MovieBasicInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/Controllers/ListMovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/Controllers/ListMovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/DemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/Models/MovieBasicInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/Models/MovieBasicInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/Models/MovieList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/Models/MovieList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../listmovieservice/target/classes/listmovie/Models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/MovieActorServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/MovieActorServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/QueueProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/FilmController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/glumac/GlumacController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/glumac/GlumacController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/MovieGenreServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/MovieGenreServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/QueueConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/QueueConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/MovieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/MovieApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/models/QueueProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/models/QueueProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/usermanagment/Models/MovieBasicInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/usermanagment/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/usermanagment/DemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/usermanagment/Models/MovieBasicInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/usermanagment/Models/MovieBasicInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/usermanagment/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/usermanagment/Models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/usermanagment/UserMovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/usermanagment/UserMovieController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,7 +16,7 @@
     <session id="1705204683">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
@@ -287,7 +224,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -374,7 +311,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555496469501" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555497541768" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -426,15 +363,15 @@
       <workItem from="1554723914865" duration="4275000" />
       <workItem from="1555146670992" duration="5829000" />
       <workItem from="1555489882387" duration="263000" />
-      <workItem from="1555491849000" duration="1736000" />
+      <workItem from="1555491849000" duration="2151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12103000" />
+    <option name="totallyTimeSpent" value="12518000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15724947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -447,7 +384,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3394794" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3394794" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />

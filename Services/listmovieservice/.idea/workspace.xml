@@ -2,70 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05f38a8f-4136-4b9c-8428-3ecf33981683" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/listmovie/QueueConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/listmovie/configuration/AmqpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/listmovie/QueueConsumer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/listmovie/configuration/AmqpConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/QueueConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/configuration/AmqpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/configuration/AmqpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/src/main/java/usermanagment/QueueConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/src/main/java/usermanagment/configuration/AmqpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/target/classes/usermanagment/QueueConsumer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/target/classes/usermanagment/configuration/AmqpConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/target/movie-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../user-movie-service/target/movie-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listmovie/Models/MovieBasicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listmovie/Models/MovieBasicInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/listmovie/Controllers/ListMovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listmovie/Controllers/ListMovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/listmovie/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listmovie/DemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/listmovie/Models/MovieBasicInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listmovie/Models/MovieBasicInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/listmovie/Models/MovieList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listmovie/Models/MovieList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/listmovie/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/listmovie/Models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/MovieActorServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/MovieActorServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/QueueProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/film/FilmController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/glumac/GlumacController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-actor-service/src/main/java/com/example/movieactorservice/glumac/GlumacController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/MovieGenreServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/MovieGenreServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/QueueConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/java/com/example/moviegenreservice/QueueConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../movie-genre-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie-genre-service/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/MovieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/MovieApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/models/QueueProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/java/com/nwt/movie/models/QueueProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../movie/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../movie/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user-movie-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-movie-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-movie-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-movie-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-movie-service/src/main/java/usermanagment/Models/MovieBasicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-movie-service/src/main/java/usermanagment/Models/MovieBasicInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-movie-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../user-movie-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-movie-service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../user-movie-service/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-movie-service/target/classes/usermanagment/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../user-movie-service/target/classes/usermanagment/DemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-movie-service/target/classes/usermanagment/Models/MovieBasicInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../user-movie-service/target/classes/usermanagment/Models/MovieBasicInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-movie-service/target/classes/usermanagment/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../user-movie-service/target/classes/usermanagment/Models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-movie-service/target/classes/usermanagment/UserMovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../user-movie-service/target/classes/usermanagment/UserMovieController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,26 +17,27 @@
     <session id="1930469350">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="12" />
+          <entry key="java" value="14" />
           <entry key="properties" value="1" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="12" />
+          <entry key="JAVA" value="14" />
           <entry key="Properties" value="1" />
           <entry key="YAML" value="1" />
         </counts>
@@ -127,15 +66,15 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Models/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Models/MovieList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
+            <state relative-caret-position="170">
               <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -145,13 +84,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/DemoApplication.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/configuration/AmqpConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/QueueConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -160,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Models/MovieBasicInfo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -170,15 +115,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/configuration/Config.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -244,6 +180,7 @@
         <option value="$PROJECT_DIR$/src/main/java/listmovie/Models/MovieList.java" />
         <option value="$PROJECT_DIR$/src/main/java/listmovie/ListMovieController.java" />
         <option value="$PROJECT_DIR$/src/main/java/listmovie/Models/MovieBasicInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/listmovie/QueueConsumer.java" />
       </list>
     </option>
   </component>
@@ -253,11 +190,18 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1929" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-1930" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -265,8 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -335,6 +277,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,7 +289,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555491220726" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gs-routing-and-filtering/initial/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
@@ -403,18 +347,19 @@
       <workItem from="1555270541112" duration="65000" />
       <workItem from="1555489424135" duration="455000" />
       <workItem from="1555490339365" duration="690000" />
-      <workItem from="1555495784073" duration="663000" />
+      <workItem from="1555495784073" duration="1570000" />
+      <workItem from="1557681079023" duration="625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11798000" />
+    <option name="totallyTimeSpent" value="13330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1927" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29731545" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30134228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -425,7 +370,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.42553192" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42553192" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -491,9 +436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -501,6 +443,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Models/MovieList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/configuration/AmqpConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Models/MovieBasicInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Controllers/ListMovieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -532,34 +512,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Controllers/ListMovieController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/QueueConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Models/MovieBasicInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/listmovie/Models/MovieList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
         </state>
       </provider>
     </entry>
