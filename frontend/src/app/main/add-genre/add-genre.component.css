@@ -1,0 +1,23 @@
+.input-genre{
+    width:100%;
+    border-radius: 5px;
+    margin-top: 4px;
+}
+
+.genre-label{
+    float: right;
+    margin-top: 5px;
+}
+
+.add-new-genre{
+    margin-top: 40px;  
+}
+
+.genre-list{
+    margin-top: 30px;
+}
+
+.list-group-item:hover{
+    background-color: #f8f9fa;
+    cursor: default;
+}

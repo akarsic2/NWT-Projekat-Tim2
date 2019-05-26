@@ -1,0 +1,21 @@
+<div class="add-genre-page">
+  <div class="row add-new-genre">
+    <div class="col-md-4 col-sm-4 col-xs">
+      <label class="genre-label">Genre:</label>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs">
+      <input type="text" class="input-genre" [(ngModel)]="newGenre"/>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs">
+      <button type="button" class="btn btn-light" (click)="addGenre()">Add</button>  
+    </div>
+  </div>
+
+  <div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-xs-4 genre-list">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let genre of genres">{{genre.name}}</li>
+    </ul>
+  </div>
+
+
+</div>

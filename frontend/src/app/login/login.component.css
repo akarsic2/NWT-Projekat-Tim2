@@ -1,0 +1,62 @@
+.login-page{
+    height: 100vh;
+    display: grid;
+}
+
+.login{
+    background-color: #e3ecf3;
+    border-radius: 10px;
+    margin:auto;
+    padding-top: 30px;
+    padding-bottom: 30px;   
+}
+
+h1{
+    text-align: center;
+    font-weight: 1000;
+    letter-spacing: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.input{
+    width:100%;
+    border-radius: 5px;
+}
+
+label{
+    color: #595858;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+}
+
+.username-section{
+    margin-top: 25px;
+}
+
+.password-section{
+    margin-top: 10px;
+}
+
+.btn-login{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width:100%;
+}
+
+.create-account{
+    text-align: right;
+}
+
+.create-account > p{
+    margin-bottom: 0px;
+    margin-right: 20px;
+    color:blue;
+}
+
+.create-account > p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

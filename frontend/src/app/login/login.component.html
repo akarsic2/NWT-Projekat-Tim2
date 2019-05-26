@@ -1,0 +1,24 @@
+<div class="login-page align-middle">
+  <div class="col-md-4 offset-md-4 login">
+    <h1>FILMOTEKA</h1>
+    <div class="col-md-6 offset-md-3 username-section">
+      <label>Username:</label>
+      <br>
+      <input type="text" class="input" [(ngModel)]="username"/>
+    </div>
+    <div class="col-md-6 offset-md-3 password-section">
+      <label>Password:</label>
+      <br>
+      <input type="password" class="input" [(ngModel)]="password"/>
+    </div>
+
+    <div class="col-md-4 offset-md-4">
+      <button type="button" class="btn btn-light btn-login" (click)='login()'>Login</button>
+    </div>
+
+    <div class="create-account" >
+      <p (click)="redirectToRegister()">Create an account.</p>
+    </div>
+  </div>
+
+</div>
