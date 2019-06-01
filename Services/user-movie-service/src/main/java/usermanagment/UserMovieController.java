@@ -55,7 +55,7 @@ public class UserMovieController {
         }
     }
 
-    @GetMapping("/getUser")
+    @GetMapping("/getUserByUsername")
     public ResponseEntity<String> getUserByUsername(@RequestBody String username) {
         try {
             Iterable<User> users = userRepository.findAll();

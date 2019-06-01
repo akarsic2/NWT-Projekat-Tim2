@@ -15,9 +15,9 @@ public class MovieBasicInfo {
     private Integer movieId;
     private String naziv;
 
-    @ManyToMany(mappedBy = "savedMovies")
+    /*@ManyToMany(mappedBy = "savedMovies")
     private Set<User> usersThatLikeTheMovie;
-
+*/
     public MovieBasicInfo() {
 
     }
@@ -49,12 +49,12 @@ public class MovieBasicInfo {
     public void setNaziv(String naziv) {
         this.naziv = naziv;
     }
-
+/*
     public Set<User> getUsersThatLikeTheMovie() {
         return usersThatLikeTheMovie;
     }
 
     public void setUsersThatLikeTheMovie(Set<User> usersThatLikeTheMovie) {
         this.usersThatLikeTheMovie = usersThatLikeTheMovie;
-    }
+    }*/
 }
