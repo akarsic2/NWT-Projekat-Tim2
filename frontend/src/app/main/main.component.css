@@ -1,12 +1,14 @@
 .whole-screen{
     background-color: #f8f9fa;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 
 .main-screen{
     padding: 0;
     background-color: white;
-    height: 100vh;
+    height: auto;
+    min-height: 78vh;
 }
 
 .navbar{
@@ -31,12 +33,24 @@
     border-radius: 5px;
 }
 
-.nav-item:hover{
+.nav-item:hover,
+.nav-link:hover{
     background-color: #e1e8ed;
+    cursor: pointer;
 }
 
 .page-title{
     background-color: #c2d7e7;
     height: 40px;
     margin-top: 20px;
+}
+
+.cover-img{
+    width:100%;
+    /* margin-left: 25%; */
+    /* position: absolute; */
+}
+
+.admin-navbar, .user-navbar{
+    margin-top:-140px;
 }

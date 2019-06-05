@@ -1,0 +1,39 @@
+.input-lists{
+    width:100%;
+    border-radius: 5px;
+    margin-top: 4px;
+    padding-left: 5px;
+}
+
+.lists-label{
+    float: right;
+    margin-top: 5px;
+}
+
+.add-new-lists{
+    margin-top: 40px;  
+}
+
+.list-group-item:hover{
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.btn-light{
+    background-color: #c3cfd7;
+    border: none;
+    border-width: 1.1px;
+    font-weight: 500;
+}
+
+.erorr-lists{
+    font-size: 14px;
+    height: 40px;
+}
+
+.error-paragraph{
+    margin:0;
+    padding:0;
+    color:red;
+    padding-left: 5px;
+}

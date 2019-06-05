@@ -1,24 +1,38 @@
 <div class="login-page align-middle">
   <div class="col-md-4 offset-md-4 login">
-    <h1>FILMOTEKA</h1>
-    <div class="col-md-6 offset-md-3 username-section">
-      <label>Username:</label>
+  <div class="col-md-8 offset-md-2 cover-section">
+      <img class="login-cover" src="https://upload.wikimedia.org/wikipedia/en/7/7d/Minions_characters.png" alt="Error loading image." >
+  </div>
+    <h1> 
+    FILMOTEKA</h1>
+    <div class="col-md-8 offset-md-2 username-section">
+      <div class="username-div">
+        <div class="fa-div">
+          <i class="fa fa-user"></i>
+        </div>
+        <input type="text" class="input" placeholder="Username" [(ngModel)]="user.username" (change)="userExists = true"/>
+      </div>
       <br>
-      <input type="text" class="input" [(ngModel)]="username"/>
     </div>
-    <div class="col-md-6 offset-md-3 password-section">
-      <label>Password:</label>
-      <br>
-      <input type="password" class="input" [(ngModel)]="password"/>
+    <div class="col-md-8 offset-md-2 password-section">
+      <div class="password-div">
+          <div class="fa-div">
+            <i class="fa fa-lock"></i>
+          </div>
+          <input type="password" class="input" placeholder="Password" [(ngModel)]="user.password" (click)="userExists = true"/>
+      </div>
     </div>
-
+    <div class="error-does-not-exist">
+      <p *ngIf="!userExists" class="error-paragraph">User with provided username and password does not exist.</p>
+    </div>
     <div class="col-md-4 offset-md-4">
       <button type="button" class="btn btn-light btn-login" (click)='login()'>Login</button>
     </div>
 
     <div class="create-account" >
-      <p (click)="redirectToRegister()">Create an account.</p>
+      <p class="create-account" (click)="redirectToRegister()">Create an account.</p>
     </div>
   </div>
 
 </div>
+

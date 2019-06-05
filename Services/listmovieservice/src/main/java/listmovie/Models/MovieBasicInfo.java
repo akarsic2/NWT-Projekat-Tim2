@@ -44,11 +44,11 @@ public class MovieBasicInfo {
         this.naziv = naziv;
     }
 
-    public Set<MovieList> getLists() {
-        return lists;
-    }
+    // public Set<MovieList> getLists() {
+    //     return lists;
+    // }
 
-    public void setLists(Set<MovieList> lists) {
-        this.lists = lists;
-    }
+    // public void setLists(Set<MovieList> lists) {
+    //     this.lists = lists;
+    // }
 }

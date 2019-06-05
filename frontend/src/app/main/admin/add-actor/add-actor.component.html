@@ -1,0 +1,30 @@
+<div class="add-actor-page">
+    <div class="row add-new-actor">
+      <div class="col-md-4 col-sm-4 col-xs-4">
+        <label class="actor-label">Actor:</label>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-2">
+        <input type="text" class="input input-actor-first-name" [(ngModel)]="newActor.name" placeholder="First name" (change)="isNameValid = true" [ngStyle]="{'border': isNameValid ? null : '1.5px solid red'}"/>
+        <div class="error-actor">
+          <p *ngIf="!isNameValid" class="error-paragraph">Please enter first name.</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-2">
+        <input type="text" class="input input-actor-last-name" [(ngModel)]="newActor.lastName" placeholder="Last name" (change)="isLastNameValid = true" [ngStyle]="{'border': isLastNameValid ? null : '1.5px solid red'}"/>
+        <div class="error-actor">
+          <p *ngIf="!isLastNameValid" class="error-paragraph">Please enter last name.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-4">
+        <button type="button" class="btn btn-light" (click)="addActor()">Add</button>  
+      </div>
+    </div>
+  
+    <div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-xs-4 actor-list">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let actor of actors">{{actor.name}} {{actor.lastName}}</li>
+      </ul>
+    </div>
+  
+  
+  </div>

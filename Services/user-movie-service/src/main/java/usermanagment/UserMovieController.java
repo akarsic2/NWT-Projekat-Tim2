@@ -9,11 +9,15 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import usermanagment.Models.MovieBasicInfo;
 import usermanagment.Models.User;
+import usermanagment.Models.UserBasic;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 
-@Controller
+@RestController
+@CrossOrigin(origins="http://localhost:4200")
 public class UserMovieController {
 
     @Autowired
@@ -25,7 +29,7 @@ public class UserMovieController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @PostMapping("/addUser")
+    @PostMapping("/add")
     public ResponseEntity<String> addNewUser(@RequestBody User user) {
         try {
             User result = userRepository.save(user);
@@ -40,45 +44,79 @@ public class UserMovieController {
         }
     }
 
-    @GetMapping("/getUser")
-    public ResponseEntity<String> getUserById(@RequestBody int userId) {
-        try {
-            Optional<User> user = userRepository.findById(userId);
+    @RequestMapping(value = "/user", method = RequestMethod.POST)
+    public ResponseEntity<User> getUserByUsernameAndPassword(@RequestBody UserBasic user){
+        try{
+            List<User> usersList = new ArrayList<>();
 
-            JSONObject o = new JSONObject(user);
+            userRepository.findAll().forEach(u -> {
+                usersList.add(u);
+            });
 
-            return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
+            // while (users.iterator().hasNext())
+            // {
+            //     result = users.iterator().next();
 
-        } catch (Exception e) {
-            System.out.print(e.getMessage());
-            return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
-        }
-    }
+            //     if (result.getUsername().equals(user.username) && result.getPassword().equals(user.password))
+            //         break;
 
-    @GetMapping("/getUserByUsername")
-    public ResponseEntity<String> getUserByUsername(@RequestBody String username) {
-        try {
-            Iterable<User> users = userRepository.findAll();
-
-            User user = null;
-
-            while (users.iterator().hasNext())
-            {
-                user = users.iterator().next();
-
-                if (user.getUsername().equals(username))
-                    break;
+            //     users.iterator().next();
+            // }
+            User result = null;
+            for (User u : usersList) {
+                System.out.println(u.getUsername() + " " + user.username);
+                System.out.println(u.getPassword() + " " + user.password);
+                if (u.getUsername().equals(user.username) && u.getPassword().equals(user.password)){
+                    result = u;
+                }
             }
 
-            JSONObject jsonObject = new JSONObject(user);
-
-            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
-
-        } catch (Exception e) {
-            System.out.print(e.getMessage());
-            return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+            return new ResponseEntity<User>(result, HttpStatus.OK);
+        }
+        catch(Exception e){
+            return null;
         }
     }
+
+    // @GetMapping("/getUser")
+    // public ResponseEntity<String> getUserById(@RequestBody int userId) {
+    //     try {
+    //         Optional<User> user = userRepository.findById(userId);
+
+    //         JSONObject o = new JSONObject(user);
+
+    //         return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
+
+    //     } catch (Exception e) {
+    //         System.out.print(e.getMessage());
+    //         return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+    //     }
+    // }
+
+    // @GetMapping("/getUser")
+    // public ResponseEntity<String> getUserByUsername(@RequestBody String username) {
+    //     try {
+    //         Iterable<User> users = userRepository.findAll();
+
+    //         User user = null;
+
+    //         while (users.iterator().hasNext())
+    //         {
+    //             user = users.iterator().next();
+
+    //             if (user.getUsername().equals(username))
+    //                 break;
+    //         }
+
+    //         JSONObject jsonObject = new JSONObject(user);
+
+    //         return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
+
+    //     } catch (Exception e) {
+    //         System.out.print(e.getMessage());
+    //         return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+    //     }
+    // }
 
     @GetMapping("/deleteUser")
     public ResponseEntity<String> deleteUserById(@RequestBody int userId) {

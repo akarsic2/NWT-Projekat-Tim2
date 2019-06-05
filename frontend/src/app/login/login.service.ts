@@ -1,14 +1,18 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
+import { UserBasic } from '../models/UserBasic.model';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor() { }
+  apiURL: string = 'http://localhost:8082';
 
-  login(username: string, password: string){
-    console.log(username);
-    console.log(password);
+  constructor(private http: HttpClient) { }
+
+  login(user: UserBasic){
+    return this.http.post<User>( this.apiURL + '/user', user);
   }
 }

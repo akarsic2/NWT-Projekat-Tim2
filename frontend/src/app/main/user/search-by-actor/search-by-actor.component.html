@@ -1,0 +1,23 @@
+<div class="add-actor-page">
+    <div class="row add-new-actor">
+      <div class="col-md-4 col-sm-4 col-xs">
+        <label class="actor-label">Actor:</label>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs">
+          <select [(ngModel)]='selectedActor' class="dropdown-actors input-actor">
+              <option *ngFor='let actor of actors' [value]="actor.id">{{actor.name + ' ' + actor.lastName}}</option>
+          </select>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs">
+        <button type="button" class="btn btn-light" (click)="findMovies()">Find movies</button>  
+      </div>
+    </div>
+  
+    <div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-xs-4 actor-list">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let movie of movies">{{movie.film}}</li>
+      </ul>
+    </div>
+  
+  
+  </div>

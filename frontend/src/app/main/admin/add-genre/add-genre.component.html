@@ -4,7 +4,10 @@
       <label class="genre-label">Genre:</label>
     </div>
     <div class="col-md-4 col-sm-4 col-xs">
-      <input type="text" class="input-genre" [(ngModel)]="newGenre"/>
+      <input type="text" class="input-genre" [(ngModel)]="newGenre" (change)="isNameValid = true" [ngStyle]="{'border': isNameValid ? null : '1.5px solid red'}"/>
+      <div  class="erorr-genre">
+        <p *ngIf="!isNameValid" class="error-paragraph">Please enter the genre.</p>
+      </div>
     </div>
     <div class="col-md-4 col-sm-4 col-xs">
       <button type="button" class="btn btn-light" (click)="addGenre()">Add</button>  
@@ -13,7 +16,7 @@
 
   <div class="col-md-4 offset-md-4 col-sm-4 offset-sm-4 col-xs-4 offset-xs-4 genre-list">
     <ul class="list-group">
-      <li class="list-group-item" *ngFor="let genre of genres">{{genre.name}}</li>
+      <li class="list-group-item" *ngFor="let genre of genres">{{genre.zanr}}</li>
     </ul>
   </div>
 

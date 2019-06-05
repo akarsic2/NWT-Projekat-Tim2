@@ -35,6 +35,8 @@ public class User {
 
     private String zemlja;
 
+    private Boolean isAdmin;
+
     public int getId() {
         return id;
     }
@@ -97,5 +99,13 @@ public class User {
 
     public void setZemlja(String zemlja) {
         this.zemlja = zemlja;
+    }
+
+    public Boolean getIsAdmin(){
+        return isAdmin;
+    }
+
+    public void setIsAdmin(Boolean isAdmin){
+        this.isAdmin = isAdmin;
     }
 }

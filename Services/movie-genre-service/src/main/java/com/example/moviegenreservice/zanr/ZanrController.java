@@ -1,18 +1,23 @@
 package com.example.moviegenreservice.zanr;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import javax.validation.Valid;
 
 import com.example.moviegenreservice.QueueConsumer;
 import com.example.moviegenreservice.film.Film;
 import com.example.moviegenreservice.film.FilmRepository;
+import com.netflix.eureka.cluster.HttpReplicationClient;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jackson.JsonObjectSerializer;
+import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +26,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins="http://localhost:4200")
 public class ZanrController {
 
     @Autowired
@@ -108,11 +114,68 @@ public class ZanrController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public ResponseEntity addNewGenre(@Valid @RequestBody Zanr genre) {
-        Zanr zanr = zanrRepository.save(genre);
+    public ResponseEntity addNewGenre(@Valid @RequestBody String genre) {
+        Zanr zanr = zanrRepository.save(new Zanr(genre));
         JSONObject o = new JSONObject();
         o.put("id", zanr.getId());
         return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/addgenrestomovie", method = RequestMethod.POST)
+    public ResponseEntity addGenresToMovie(@Valid @RequestBody MovieGenres movieGenres) {
+        try{
+            Film f = new Film();
+            f.setId(movieGenres.movieId);
+            f.setFilm(movieGenres.movieName);
+            for (Integer genreId : movieGenres.genres) {
+                Zanr z = new Zanr();
+                z.setId(genreId);
+                f.setZanrs(z);
+            }
+            
+            filmRepository.save(f);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        catch(Exception ex){
+            System.out.println(ex);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @RequestMapping(value="movies/genre/{genreId}", method = RequestMethod.GET)
+    public ResponseEntity<Set<Film>> getMoviesByGenre(@PathVariable int genreId){
+        try{
+            List<Zanr> genres = new ArrayList();
+             zanrRepository.findAll().forEach(x -> {
+                genres.add(x);
+             });
+
+             Zanr specificGenre = new Zanr();
+
+             for (Zanr genre : genres) {
+                 if (genre.getId() == genreId){
+                     specificGenre = genre;
+                     break;
+                 }
+             }
+             Set<Film> movies = specificGenre.getMovies();
+             return new ResponseEntity<>(movies, HttpStatus.OK);
+        }
+        catch(Exception ex){
+            System.out.println(ex);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }    
+
+    @RequestMapping(value="zanrovi", method = RequestMethod.GET)
+    public ResponseEntity getGenres(){
+        List<Zanr> zanrovi = new ArrayList<>();
+        zanrRepository.findAll().forEach(zanr -> {
+            zanrovi.add(zanr);
+        });{
+
+        };
+        return new ResponseEntity<>(zanrovi, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/zanrovi/{zanr}", method = RequestMethod.GET)

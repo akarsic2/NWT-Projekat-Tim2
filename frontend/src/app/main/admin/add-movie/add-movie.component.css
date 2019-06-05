@@ -1,0 +1,65 @@
+.input{
+    width:100%;
+    border-radius: 5px;
+}
+
+.input.textarea{
+    border-width: 2px;
+    border-bottom: inset;
+    border-right: inset;
+}
+
+.label{
+    margin-bottom: 3px;
+    color:#575757;
+    text-align: right;
+    padding-top:7px;
+    padding-right:0px;   
+}
+
+.col-md-4.offset-md-4{
+    margin-bottom: 7px;
+}
+
+.name-div{
+    margin-top: 20px;
+}
+
+.btn-light{
+    width:80%;
+    margin-top: 8px;
+    background-color: #c3cfd7;
+    border: none;
+    border-width: 1.1px;
+    font-weight: 500;
+}
+
+.form.form-horizontal{
+    width:100%;
+}
+
+.error-validation{
+    color:red;
+    font-size: 14px;
+}
+
+.form{
+    margin-top: 20px;
+}
+
+.form-group{
+    margin:0;
+    height: 63px;
+}
+
+.form-group.desc{
+    height: 110px;
+}
+
+.form-group.hidden{
+    height: 0px;
+}
+
+.cuppa-dropdown .selected-list .c-btn{
+    border: 1px solid gray !important;
+}

@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="add-movie-page">
+<div class="row add-new-movie form-group">
+    <form name="frmMovie" class="form form-horizontal" #fMovie="ngForm">
+        <div class="form-group required hidden"><input type="hidden" name="id" [(ngModel)]="movie.id"></div>
+
+        <!-- name -->
+        <div class="form-group required row">
+            <label class="col-md-4 label" for="name">Name:</label>
+            <div class="col-md-4">
+                <input id="name" required minlength="5" type="text" class="form-control" #fName="ngModel" [(ngModel)]="movie.naziv" name="fName"  >
+                <div class="error-validation" *ngIf="isSubmitTriggered && (fName.errors?.required || fName.errors?.minlength)">
+                    <div *ngIf="fName.errors.required">
+                        Name is required field.
+                    </div>
+                    <div *ngIf="fName.errors.minlength">
+                        Name must be at least 5 characters long.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- description -->
+        <div class="form-group required row desc">
+            <label class="col-md-4 label" for="name">Description:</label>
+            <div class="col-md-4">
+                <textarea rows="3" id="description" required minlength="10" type="text" class="form-control" 
+                    #fDescription="ngModel" [(ngModel)]="movie.kratakOpis" name="fDescription">
+                </textarea>
+
+                <div class="error-validation" *ngIf="isSubmitTriggered && (fDescription.errors?.required || fDescription.errors?.minlength)">
+                    <div *ngIf="fDescription.errors.required">
+                        Description is required field.
+                    </div>
+                    <div *ngIf="fDescription.errors.minlength">
+                        Description must be at least 10 characters long.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group required row">
+            <label class="col-md-4 label" for="name">Directed by:</label>
+            <div class="col-md-4">
+                <input id="directedBy" required type="text" class="form-control" #fDirectedBy="ngModel" [(ngModel)]="movie.reziser" name="fDirectedBy" >
+                <div class="error-validation" *ngIf="isSubmitTriggered && fDirectedBy.errors?.required">
+                    <div *ngIf="fDirectedBy.errors.required">
+                        Directed by is required field.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group required row">
+            <label class="col-md-4 label" for="name">Produced by:</label>
+            <div class="col-md-4">
+                <input id="producedBy" required type="text" class="form-control" #fProducedBy="ngModel" [(ngModel)]="movie.scenaristi" name="fProducedBy" >
+                <div class="error-validation" *ngIf="isSubmitTriggered && fProducedBy.errors?.required">
+                    <div *ngIf="fProducedBy.errors.required">
+                        Produced by is required field.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group required row">
+            <label class="col-md-4 label" for="name">Trailer:</label>
+            <div class="col-md-4">
+                <input id="trailer" required type="text" class="form-control" #fTrailer="ngModel" [(ngModel)]="movie.trailer" name="fTrailer" >
+                <div class="error-validation" *ngIf="isSubmitTriggered && (fTrailer.errors?.required || !isRegexForTrailerValid())">
+                    <div *ngIf="fTrailer.errors?.required">
+                        Trailer is required field.
+                    </div>
+                    <div *ngIf="!isRegexForTrailerValid()">
+                        Trailer has to be a youtube link.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group required row">
+            <label class="col-md-4 label" for="name">Image URL:</label>
+            <div class="col-md-4">
+                <input id="image" required type="text" class="form-control" #fImage="ngModel" [(ngModel)]="movie.slika" name="fImage" >
+                <div class="error-validation" *ngIf="isSubmitTriggered && fImage.errors?.required">
+                    <div *ngIf="fImage.errors.required">
+                        Image URl is required field.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group required row">
+            <label class="col-md-4 label" for="name"></label>
+            <div class="col-md-4 genres">
+            <angular2-multiselect [data]="dropdownListGenres" [(ngModel)]="selectedItemsGenres" 
+                    [settings]="dropdownSettingsGenres" 
+                    name="fGenres">
+            </angular2-multiselect>
+            </div>
+        </div>
+        <div class="form-group required row">
+                <label class="col-md-4 label" for="name"></label>
+                <div class="col-md-4 actors">
+                <angular2-multiselect [data]="dropdownListActors" [(ngModel)]="selectedItemsActors" 
+                        [settings]="dropdownSettingsActors" 
+                        name="fActors">
+                </angular2-multiselect>
+                </div>
+            </div>
+
+        <div class="col-md-2 offset-md-5">
+            <button class="btn btn-light btn-add" (click)='addMovie(fMovie)'>Add</button>
+        </div>
+        
+    </form>
+
+   
+</div>

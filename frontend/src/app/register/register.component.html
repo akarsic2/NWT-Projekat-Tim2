@@ -1,50 +1,156 @@
 <div class="register-page align-middle">
   <div class="col-md-4 offset-md-4 register">
+    <div class="col-md-8 offset-md-2 cover-section">
+        <img class="register-cover" src="https://upload.wikimedia.org/wikipedia/en/7/7d/Minions_characters.png" alt="Error loading image." >
+    </div>
     <h1>FILMOTEKA</h1>
-    <div class="col-md-6 offset-md-3 firstname-section">
-      <label>First name:</label>
-      <br>
-      <input type="text" class="input"/>
-    </div>
-    <div class="col-md-6 offset-md-3 last-name-section">
-      <label>Last name:</label>
-      <br>
-      <input type="text" class="input"/>
-    </div>
-    <div class="col-md-6 offset-md-3 email-section">
-      <label>Email:</label>
-      <br>
-      <input type="text" class="input"/>
-    </div>
-    <div class="col-md-6 offset-md-3 username-section">
-      <label>Username:</label>
-      <br>
-      <input type="text" class="input"/>
-    </div>
-    <div class="col-md-6 offset-md-3 password-section">
-      <label>Password:</label>
-      <br>
-      <input type="password" class="input"/>
-    </div>
-    <div class="col-md-6 offset-md-3 confirm-password-section">
-      <label>Confirm password:</label>
-      <br>
-      <input type="password" class="input"/>
-    </div>
-    <div class="col-md-6 offset-md-3 date-of-birth-section">
-      <label>Date of birth:</label>
-      <br>
-      <input type="text" class="input"/>
-    </div>    
-    <div class="col-md-6 offset-md-3 country-section">
-      <label>Country:</label>
-      <br>
-      <input type="text" class="input"/>
-    </div>
+    <form name="frmUser" class="form form-horizontal" #fUser="ngForm">
+      <!-- first name -->
+      <div class="col-md-8 offset-md-2">
+        <div class="input-div">
+            <div class="fa-div">
+              <i class="fa fa-user"></i>
+            </div>
+            <input type="text" required minlength="5" class="input" name="fFirstName" placeholder="First name" #fFirstName="ngModel" [(ngModel)]="user.ime"/>
+          </div>
+          <div class="error-validation" *ngIf="isSubmitTriggered && (fFirstName.errors?.required || fFirstName.errors?.minlength)">
+              <div *ngIf="fFirstName.errors?.required">
+                  First name is required field.
+              </div>
+              <div *ngIf="fFirstName.errors.minlength">
+                  First name must be at least 5 characters long.
+              </div>
+          </div>
+      </div>
+      <!-- last name -->
+      <div class="col-md-8 offset-md-2">
+        <div class="input-div">
+            <div class="fa-div">
+              <i class="fa fa-user"></i>
+            </div>
+            <input type="text" required minlength="5" class="input" name="lastName" placeholder="Last name" #fLastName="ngModel"  [(ngModel)]="user.prezime"/>
+        </div>
+        <div class="error-validation" *ngIf="isSubmitTriggered && (fLastName.errors?.required  || fLastName.errors?.minlength)">
+            <div *ngIf="fLastName.errors?.required">
+                Last name is required field.
+            </div>
+            <div *ngIf="fLastName.errors.minlength">
+                First name must be at least 5 characters long.
+            </div>
+        </div>
+      </div>
+      <!-- email -->
+      <div class="col-md-8 offset-md-2">
+        <div class="input-div">
+            <div class="fa-div">
+              <i class="fa fa-at"></i>
+            </div>
+            <input type="text" required class="input" name="email" placeholder="Email" #fEmail="ngModel"  [(ngModel)]="user.email"/>
+        </div>
+        <div class="error-validation" *ngIf="isSubmitTriggered && (fEmail.errors?.required || !isEmailRegexValid())">
+            <div *ngIf="fEmail.errors?.required">
+                Email is required field.
+            </div>
+            <div *ngIf="!isEmailRegexValid()">
+                This is not an email.
+            </div>
+        </div>
+      </div>
+      <!-- username -->
+      <div class="col-md-8 offset-md-2">
+        <div class="input-div">
+            <div class="fa-div">
+              <i class="fa fa-user-o"></i>
+            </div>
+            <input type="text" required minlength="5" class="input" name="username" placeholder="Username" #fUsername="ngModel"  [(ngModel)]="user.username"/>
+        </div>
+        <div class="error-validation" *ngIf="isSubmitTriggered && (fUsername.errors?.required || fUsername.errors?.minlength)">
+            <div *ngIf="fUsername.errors?.required">
+                Username is required field.
+            </div>
+            <div *ngIf="fUsername.errors?.minlength">
+                Username must be at least 5 characters long.
+            </div>
+        </div>
+      </div>
+      <!-- password -->
+      <div class="col-md-8 offset-md-2">
+        <div class="input-div">
+            <div class="fa-div">
+              <i class="fa fa-lock"></i>
+            </div>
+            <input type="password" required minlength="5" class="input" name="password" placeholder="Password" #fPassword="ngModel"  [(ngModel)]="password.first"/>
+        </div>
+        <div class="error-validation" *ngIf="isSubmitTriggered && (fPassword.errors?.required || fPassword.errors?.minlength)">
+            <div *ngIf="fPassword.errors?.required">
+                Password is required field.
+            </div>
+            <div *ngIf="fPassword.errors.minlength">
+                Password must be at least 5 characters long.
+            </div>
+        </div>
+      </div>
+      <!-- confirm password -->
+      <div class="col-md-8 offset-md-2">
+        <div class="input-div">
+            <div class="fa-div">
+              <i class="fa fa-lock"></i>
+            </div>
+            <input type="password" required class="input" name="confirmPassword" placeholder="Confirm password" #fConfirmPassword="ngModel"  [(ngModel)]="password.second"/>
+        </div>
+        <div class="error-validation" *ngIf="isSubmitTriggered && (fPassword.errors?.required || password.first != password.second)">
+            <div *ngIf="fPassword.errors?.required">
+                Password is required field.
+            </div>
+            <div *ngIf="password.first != password.second">
+                Passwords have to match.
+            </div>
+        </div>
+      </div>
+      <!-- date of birth -->
+      <div class="col-md-8 offset-md-2">
+        <div class="input-div">
+            <div class="fa-div">
+              <i class="fa fa-user"></i>
+            </div>
+            <!-- <input type="text" required class="input" name="dateOfBirth" placeholder="Date of birth" #fDateOfBirth="ngModel"  [(ngModel)]="user.datumRodjenja"/> -->
+            <input
+            placeholder="Date of birth"
+            required
+            class="input"
+            name="dateOfBirth"
+            [(ngModel)]="user.datumRodjenja"
+            #fDateOfBirth="ngModel"
+            bsDatepicker
+            autocomplete="off"
+            placement="top">
+          </div>
+          <div class="error-validation" *ngIf="isSubmitTriggered && fDateOfBirth.errors?.required">
+              <div *ngIf="fDateOfBirth.errors.required">
+                  Date of birth is required field.
+              </div>
+          </div>
+      </div>
+      <!-- country -->
+      <div class="col-md-8 offset-md-2">
+        <div class="input-div">
+            <div class="fa-div">
+              <i class="fa fa-globe"></i>
+            </div>
+            <input type="text" required class="input" name="country" placeholder="Contry" #fCountry="ngModel"  [(ngModel)]="user.drzava"/>
+        </div>
+        <div class="error-validation" *ngIf="isSubmitTriggered && fCountry.errors?.required">
+            <div *ngIf="fCountry.errors.required">
+                Country is required field.
+            </div>
+        </div>
+      </div>
 
-    <div class="col-md-4 offset-md-4">
-      <button type="button" class="btn btn-light btn-register" >Register</button>
-    </div>
+      <div class="col-md-4 offset-md-4">
+        <button type="button" class="btn btn-light btn-register" (click)="register(fUser)">Register</button>
+      </div>
+    </form>
+    
   </div>
 
 </div>

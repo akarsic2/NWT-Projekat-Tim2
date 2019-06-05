@@ -47,4 +47,12 @@ public class MovieList {
     public void setListName(String listName) {
         this.listName = listName;
     }
+
+    // public User getUser(){
+    //     return user;
+    // }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }

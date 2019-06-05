@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import javax.management.Notification;
 import javax.validation.Valid;
@@ -16,6 +17,7 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +26,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins="http://localhost:4200")
 public class GlumacController {
 
     @Autowired
@@ -106,6 +109,17 @@ public class GlumacController {
    
     }
 
+    @RequestMapping(value="glumci", method = RequestMethod.GET)
+    public ResponseEntity getActors(){
+        List<Glumac> glumci = new ArrayList<>();
+        glumacRepository.findAll().forEach(glumac -> {
+            glumci.add(glumac);
+        });{
+
+        };
+        return new ResponseEntity<>(glumci, HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ResponseEntity addNewActor(@Valid @RequestBody Glumac glumac) {
         Glumac glumac1 = glumacRepository.save(glumac);
@@ -114,6 +128,53 @@ public class GlumacController {
         return new ResponseEntity<String>(o.toString(), HttpStatus.OK);
         
     }
+
+
+    @RequestMapping(value = "/addactorstomovie", method = RequestMethod.POST)
+    public ResponseEntity addActorsToMovie(@Valid @RequestBody MovieActors movieActors) {
+        try{
+            Film f = new Film();
+            f.setId(movieActors.movieId);
+            f.setFilm(movieActors.movieName);
+            for (Integer actorId : movieActors.actors) {
+                Glumac g = new Glumac();
+                g.setId(actorId);
+                f.setGlumci(g);
+            }
+            
+            filmRepository.save(f);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        catch(Exception ex){
+            System.out.println(ex);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @RequestMapping(value="movies/actor/{actorId}", method = RequestMethod.GET)
+    public ResponseEntity<Set<Film>> getMoviesByGenre(@PathVariable int actorId){
+        try{
+            List<Glumac> actors = new ArrayList();
+             glumacRepository.findAll().forEach(x -> {
+                actors.add(x);
+             });
+
+             Glumac specificActor = new Glumac();
+
+             for (Glumac actor : actors) {
+                 if (actor.getId() == actorId){
+                     specificActor = actor;
+                     break;
+                 }
+             }
+             Set<Film> movies = specificActor.getMovies();
+             return new ResponseEntity<>(movies, HttpStatus.OK);
+        }
+        catch(Exception ex){
+            System.out.println(ex);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    } 
 
     @RequestMapping(value = "/glumac/{name}/{last}", method = RequestMethod.GET)
     public ResponseEntity findActor(@PathVariable String name, @PathVariable String last) {
