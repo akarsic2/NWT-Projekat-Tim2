@@ -37,3 +37,38 @@
     color:red;
     padding-left: 5px;
 }
+
+.add-lists-page {
+    display: inline-flex;
+    flex-flow: column;
+}
+
+.list-movies {
+    display: inline-flex;
+}
+
+.list-group-movies {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.list-group-item {
+    width: 200px;
+}
+
+.selected {
+    background-color: gray;
+}
+
+.margl {
+    margin-left: 35px;
+    text-align: center;
+}
+
+.filmFilter {
+    margin-bottom: 14px;
+}
+
+.add-movie-button {
+    margin-bottom: 14px;
+}

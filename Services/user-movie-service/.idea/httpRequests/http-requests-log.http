@@ -1,0 +1,8 @@
+GET http://localhost:8084/{GET%20/getmoviesforlist/{listId}}
+
+###
+
+GET http://localhost:8084/{POST%20/addmovietolist}
+
+###
+

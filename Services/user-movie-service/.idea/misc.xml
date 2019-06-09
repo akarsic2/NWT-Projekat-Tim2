@@ -5,6 +5,10 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../movie/pom.xml" />
+        <option value="$PROJECT_DIR$/../listmovieservice/pom.xml" />
+        <option value="$PROJECT_DIR$/../movie-actor-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../movie-genre-service/pom.xml" />
       </list>
     </option>
   </component>

@@ -9,6 +9,7 @@ import { AddGenreComponent } from './main/admin/add-genre/add-genre.component';
 import { MyListsComponent } from './main/user/my-lists/my-lists.component';
 import { SearchByGenreComponent } from './main/user/search-by-genre/search-by-genre.component';
 import { SearchByActorComponent } from './main/user/search-by-actor/search-by-actor.component';
+import { AddMovieToListComponent } from './add-movie-to-list/add-movie-to-list.component';
 
 
 const appRoutes: Routes = [
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
     {path:'add-genre', component:AddGenreComponent},
     {path:'my-lists', component:MyListsComponent},
     {path:'search-by-genre', component:SearchByGenreComponent},
-    {path:'search-by-actor', component:SearchByActorComponent}
+    {path:'search-by-actor', component:SearchByActorComponent},
+    {path:'add-movie-to-list', component:AddMovieToListComponent}
   ]},
   {path: '**', component: LoginComponent}
 ];

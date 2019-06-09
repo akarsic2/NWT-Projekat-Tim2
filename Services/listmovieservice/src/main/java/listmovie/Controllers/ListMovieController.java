@@ -1,21 +1,19 @@
 package listmovie.Controllers;
 
-import listmovie.Models.MovieList;
-import listmovie.Models.MovieListUser;
+import listmovie.Models.*;
 import listmovie.Repositories.MovieBasicInfoRepository;
+import listmovie.Repositories.MovieListPRepository;
 import listmovie.Repositories.MovieListRepository;
 import listmovie.Repositories.UserRepository;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,9 +22,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-import listmovie.Models.MovieBasicInfo;
-import listmovie.Models.User;
-import listmovie.Models.UserList;
 
 
 @RestController
@@ -41,6 +36,9 @@ public class ListMovieController {
 
     @Autowired
     private MovieListRepository movieListRepository;
+
+    @Autowired
+    private MovieListPRepository movieListPRepository;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -120,7 +118,38 @@ public class ListMovieController {
         }
     }
 
+    @CrossOrigin
+    @RequestMapping(value="getmoviesforlist/{listId}", method = RequestMethod.GET)
+    public ResponseEntity<ArrayList<Integer>> getMoviesForList(@PathVariable int listId) {
+       ArrayList<Integer> moviesIds = new ArrayList<Integer>();
+
+       movieListPRepository.findAll().forEach(m -> {
+           if (m.listId == listId)
+               moviesIds.add(m.movieId);
+       });
+
+        return new ResponseEntity<ArrayList<Integer>>(moviesIds, HttpStatus.OK);
+    }
+
+    @CrossOrigin
     @RequestMapping(value="addmovietolist", method = RequestMethod.POST)
+    public ResponseEntity<MovieList> addMovieToList(@RequestBody MovieListP movieList) {
+         AtomicBoolean entryExists = new AtomicBoolean(false);
+
+        movieListPRepository.findAll().forEach(m -> {
+            if (m.listId == movieList.listId && m.movieId == movieList.movieId)
+                entryExists.set(true);
+        });
+
+        if (entryExists.get() == true)
+            return new ResponseEntity<MovieList>(new MovieList(), HttpStatus.NOT_ACCEPTABLE);
+
+        movieListPRepository.save(movieList);
+
+        return new ResponseEntity<MovieList>(new MovieList(), HttpStatus.OK);
+    }
+
+    /*@RequestMapping(value="addmovietolist", method = RequestMethod.POST)
     public ResponseEntity<MovieList> addMovieToList(@RequestBody MovieListUser movieListUser) {
         try{
             List<MovieBasicInfo> movies = new ArrayList();
@@ -169,7 +198,7 @@ public class ListMovieController {
             System.out.print(e.getMessage());
             return new ResponseEntity<MovieList>(new MovieList(), HttpStatus.NOT_ACCEPTABLE);
         }
-    }
+    }*/
     /*@PostMapping("/addMovie")
     public void addMovie(@RequestParam("movieId") int movieId, @RequestParam("name") String name) {
         try {

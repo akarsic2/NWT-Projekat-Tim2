@@ -20,6 +20,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 import { SearchByGenreComponent } from './main/user/search-by-genre/search-by-genre.component';
 import { SearchByActorComponent } from './main/user/search-by-actor/search-by-actor.component';
+import { AddMovieToListComponent } from './add-movie-to-list/add-movie-to-list.component';
 
 
 
@@ -34,7 +35,8 @@ import { SearchByActorComponent } from './main/user/search-by-actor/search-by-ac
     AddMovieComponent,
     MyListsComponent,
     SearchByGenreComponent,
-    SearchByActorComponent
+    SearchByActorComponent,
+    AddMovieToListComponent
     ],
   imports: [
     BrowserModule,
