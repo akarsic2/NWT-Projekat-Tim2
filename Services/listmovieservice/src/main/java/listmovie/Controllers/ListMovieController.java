@@ -43,6 +43,10 @@ public class ListMovieController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @RequestMapping("/")
+    public void addDataToTable() {
+    }
+
     @PostMapping("/addBasicMovieInfo")
     public ResponseEntity<String> addNewMovie(@RequestBody MovieBasicInfo movie) {
         try {
